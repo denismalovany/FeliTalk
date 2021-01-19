@@ -15,7 +15,7 @@ module.exports = {
         'logo': '2rem'
        },
        fontFamily: {
-         'logo': 'Arial Rounded MT',
+         'logo': 'Nunito',
          'Ubuntu': 'Ubuntu'
        },
        colors: {
