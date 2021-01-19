@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Arial Rounded MT';
+    src: url('fonts/ArialRoundedMTBold.woff2') format('woff2'),
+        url('fonts/ArialRoundedMTBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .btn-primary {
+      @apply inline-flex items-center bg-f-yellow text-white font-medium rounded border-0 py-3 px-9 focus:outline-none hover:shadow-hover text-base;
+    }
+    .btn-secondary {
+      @apply inline-flex items-center bg-transparent text-f-yellow font-medium rounded border-2 border-f-yellow py-3 px-9 focus:outline-none hover:underline text-base;
+    }
+    .btn-transparent {
+      @apply inline-flex items-center bg-transparent text-f-yellow font-medium rounded border-0 py-3 px-9 focus:outline-none hover:underline text-base;
+    }
+}
