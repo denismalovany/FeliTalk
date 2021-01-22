@@ -11,4 +11,16 @@
     .btn-transparent {
       @apply inline-flex items-center bg-transparent text-f-yellow font-medium rounded border-0 py-3 px-9 focus:outline-none hover:underline text-base;
     }
+    .breadcrumps-row{
+      @apply flex flex-row;
+    }
+    .breadcrumps-row>*{
+      @apply text-16 mx-4;
+    }
+    .breadcrumps-row>a{
+      @apply text-f-blue hover:underline;
+    }
+    .breadcrumps-row>a:first-child{
+      @apply ml-0;
+    }
 }
