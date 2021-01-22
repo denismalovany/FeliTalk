@@ -12,7 +12,7 @@
       @apply inline-flex items-center bg-transparent text-f-yellow font-medium rounded border-0 py-3 px-9 focus:outline-none hover:underline text-base;
     }
     .breadcrumps-row{
-      @apply flex flex-row;
+      @apply flex flex-row text-f-grey;
     }
     .breadcrumps-row>*{
       @apply text-16 mx-4;
