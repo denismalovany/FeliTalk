@@ -40,6 +40,9 @@ module.exports = {
         '54px': '3.375rem',
         '41px': '2.563rem',
       },
+      spacing:{
+        '468px': "29.25rem",
+      },
       width:{
         '54px': '3.375rem',
       },
