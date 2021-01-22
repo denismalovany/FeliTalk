@@ -23,4 +23,13 @@
     .breadcrumps-row>a:first-child{
       @apply ml-0;
     }
+    .max-w-card{
+      max-width: calc(25% - 1.125rem);
+    }
+    .tab-btn-active{
+      @apply  text-f-dark-blue text-24 py-4 px-6 block focus:outline-none border-b-4 font-medium border-f-blue;
+    }
+    .tab-btn{
+      @apply text-f-dark-blue text-24 py-4 px-6 block focus:outline-none font-normal hover:underline;
+    }
 }
