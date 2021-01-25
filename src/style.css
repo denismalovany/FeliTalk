@@ -32,4 +32,19 @@
     .tab-btn{
       @apply text-f-dark-blue text-24 py-4 px-6 block focus:outline-none font-normal hover:underline;
     }
+    .header-active{
+      display:inline-block;
+      position:relative;
+    }
+    .header-active:before{
+      content:" ";
+      display: inline-block;
+      position:absolute;
+      height: 0.25rem;
+      width:100%;
+      background-color: #FFB703;
+      left:-0.25rem;
+      top:calc(50% - 0.125rem);
+      z-index: -1;
+    }
 }
