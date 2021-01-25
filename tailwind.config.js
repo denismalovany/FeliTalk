@@ -45,10 +45,13 @@ module.exports = {
       },
       width:{
         '54px': '3.375rem',
+        '88px': '5.5rem',
+        '424px': '26.5rem',
       },
       maxWidth:{
         '312px': '19.5rem',
         '1/4': '25%',
+        '424px': '26.5rem',
       },
       maxHeight:{
         '312px': '19.5rem',
@@ -60,6 +63,7 @@ module.exports = {
       backgroundImage: {
         'videocard': "url('img/young-asia-businessman-using-computer-laptop-talk-colleagues-about-plan-video-call-meeting-while-working-from-home-living-room-self-isolation-social-distancing-quarantine-corona-virus.jpg')",
         'team': "url('img/Group 13098.svg')",
+        'polygon': "url('img/num-polygon.svg')",
       },
       opacity:{
         '16': '0.16',
