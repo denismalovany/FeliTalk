@@ -52,6 +52,7 @@ module.exports = {
         '312px': '19.5rem',
         '1/4': '25%',
         '424px': '26.5rem',
+        '220px': '13.75rem',
       },
       maxHeight:{
         '312px': '19.5rem',
@@ -59,6 +60,7 @@ module.exports = {
       boxShadow: {
         'hover': '0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04)',
         'medium': '0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04)',
+        'large': '0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04)',
       },
       backgroundImage: {
         'videocard': "url('img/young-asia-businessman-using-computer-laptop-talk-colleagues-about-plan-video-call-meeting-while-working-from-home-living-room-self-isolation-social-distancing-quarantine-corona-virus.jpg')",
