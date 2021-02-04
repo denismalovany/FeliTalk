@@ -63,7 +63,7 @@ module.exports = {
         'large': '0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04)',
       },
       backgroundImage: {
-        'videocard': "url('img/young-asia-businessman-using-computer-laptop-talk-colleagues-about-plan-video-call-meeting-while-working-from-home-living-room-self-isolation-social-distancing-quarantine-corona-virus.jpg')",
+        'videocard': "url('img/pretty-asian-teacher-smiling-camera-back-classroom-elementary-school-vintage-effect-style-pictures 1.jpg')",
         'team': "url('img/Group 13098.svg')",
         'polygon': "url('img/num-polygon.svg')",
       },

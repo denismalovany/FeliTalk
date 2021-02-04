@@ -47,4 +47,14 @@
       top:calc(50% - 0.125rem);
       z-index: -1;
     }
+    .calendar *{
+      min-width: 24px;
+
+    }
+    .inactive-date-calendar{
+      @apply text-16 text-f-grey cursor-not-allowed;
+    }
+    .active-date-calendar{
+      @apply text-16 text-f-blue font-medium cursor-pointer;
+    }
 }
