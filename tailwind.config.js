@@ -69,6 +69,9 @@ module.exports = {
       },
       opacity:{
         '16': '0.16',
+      },
+      padding:{
+        '60px': '3.75rem',
       }
     },
   },
