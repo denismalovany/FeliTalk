@@ -3,13 +3,13 @@
 @tailwind utilities;
 @layer components {
     .btn-primary {
-      @apply inline-flex items-center bg-f-yellow text-white font-medium rounded border-0 py-3 px-9 focus:outline-none hover:shadow-hover text-base;
+      @apply inline items-center bg-f-yellow text-white font-medium rounded border-0 py-3 px-9 focus:outline-none hover:shadow-hover text-base;
     }
     .btn-secondary {
-      @apply inline-flex items-center bg-transparent text-f-yellow font-medium rounded border-2 border-f-yellow py-3 px-9 focus:outline-none hover:underline text-base;
+      @apply inline items-center bg-transparent text-f-yellow font-medium rounded border-2 border-f-yellow py-3 px-9 focus:outline-none hover:underline text-base;
     }
     .btn-transparent {
-      @apply inline-flex items-center bg-transparent text-f-yellow font-medium rounded border-0 py-3 px-9 focus:outline-none hover:underline text-base;
+      @apply inline items-center bg-transparent text-f-yellow font-medium rounded border-0 py-3 px-9 focus:outline-none hover:underline text-base;
     }
     .breadcrumps-row{
       @apply flex flex-row text-f-grey;
