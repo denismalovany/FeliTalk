@@ -60,7 +60,13 @@
     .sidebar-li{
       @apply block pl-5 py-3 mt-2 text-16 font-medium text-f-white bg-transparent rounded-r-sm rounded-l-full hover:underline focus:underline focus:outline-none;
     }
+    .sidebar-li svg{
+      @apply inline stroke-current text-f-white mr-4;
+    }
     .sidebar-li-active{
       @apply block pl-5 py-3 mt-2 text-16 font-medium text-f-dark-blue bg-f-white rounded-r-sm rounded-l-full hover:underline focus:underline focus:outline-none;
+    }
+    .sidebar-li-active svg{
+      @apply inline stroke-current text-f-dark-blue mr-4;
     }
 }
