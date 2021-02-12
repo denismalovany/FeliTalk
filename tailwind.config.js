@@ -47,12 +47,15 @@ module.exports = {
         '54px': '3.375rem',
         '88px': '5.5rem',
         '424px': '26.5rem',
+        '100-384px': 'calc(100vw - 24rem)',
+        '1344px': '84rem',
       },
       maxWidth:{
         '312px': '19.5rem',
         '1/4': '25%',
         '424px': '26.5rem',
         '220px': '13.75rem',
+        '1344px': '84rem',
       },
       maxHeight:{
         '312px': '19.5rem',
