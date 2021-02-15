@@ -39,16 +39,19 @@ module.exports = {
         '312px': '19.5rem',
         '54px': '3.375rem',
         '41px': '2.563rem',
+        '68px': '4.25rem',
       },
       spacing:{
         '468px': "29.25rem",
       },
       width:{
         '54px': '3.375rem',
+        '68px': '4.25rem',
         '88px': '5.5rem',
         '424px': '26.5rem',
         '100-384px': 'calc(100vw - 24rem)',
         '1344px': '84rem',
+        '200px': '12.5rem',
       },
       maxWidth:{
         '312px': '19.5rem',
@@ -76,6 +79,7 @@ module.exports = {
       },
       padding:{
         '60px': '3.75rem',
+        '50px': '3.125rem',
       }
     },
   },
