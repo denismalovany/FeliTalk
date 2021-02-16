@@ -117,7 +117,7 @@
         </div>
         <div class="w-100-384px overflow-auto max-h-screen py-12 px-6">
             <h1 class="text-32 text-f-dark-blue font-bold mb-6">My lessons</h1>
-            <div x-data="{ openTab: 1 }" class="">
+            <div x-data="{ openTab: 3 }" class="">
                 <ul class="flex border-b border-f-light-grey">
                     <li @click="openTab = 1" :class="{ '-mb-px': openTab === 1 }" class="mr-1">
                         <a :class="openTab === 1 ? 'tab-active' : 'hover:underline'"
@@ -132,10 +132,14 @@
                             class="tab" href="#">Completed</a>
                     </li>
                 </ul>
-                <div class="w-full pt-4">
+                <div class="w-full pt-6">
                     <div x-show="openTab === 1">Tab #1</div>
                     <div x-show="openTab === 2">Tab #2</div>
-                    <div x-show="openTab === 3">Tab #3</div>
+                    <div x-show="openTab === 3" class="pt-4">
+                        <h2 class="text-24 text-f-dark-blue font-medium mb-4">You don't have booked lessons</h2>
+                        <p class="mb-8">But don't worry, you can choose teacher and book a lesson with teacher</p>
+                        <button class="btn-primary w-200px">Book a lesson</button>
+                    </div>
                 </div>
             </div>
 
