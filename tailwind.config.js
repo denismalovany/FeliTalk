@@ -32,6 +32,8 @@ module.exports = {
         'f-red': '#FF3939',
         'f-very-light-blue': '#ECF8FF',
         'f-bcg': '#F6FAFC',
+        'f-16-blue': '#E2EFF4',
+        'f-16-grey': '#EEEEEE',
       },
       height:{
         '748px': "46.75rem",
