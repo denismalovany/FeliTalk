@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Ubuntu:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <title>Felitalk</title>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body x-data="{ 'isDialogOpen': true }" @keydown.escape="isDialogOpen = false"
+    class="font-Ubuntu bg-f-white min-h-screen relative pb-468px">
+    <!-- state of modal -->
+
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap py-4 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <img src="img\book-of-black-cover-closed.svg" alt="" srcset="">
+                <span class="ml-3 text-logo font-logo text-f-dark-blue">FeliTalk</span>
+            </a>
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center font-normal">
+                <a class="mr-5 hover:text-gray-900 font-medium">Features</a>
+                <a class="mr-5 hover:text-gray-900">Teachers</a>
+                <a class="mr-5 hover:text-gray-900">Plans</a>
+                <a class="mr-5 hover:text-gray-900">Lesson materials</a>
+                <a class="mr-5 hover:text-gray-900">FAQ</a>
+            </nav>
+            <button class="btn-transparent">Log in</button>
+            <button class="btn-primary">Yes, cancel lesson</button>
+        </div>
+    </header>
+    <section class="text-gray-600 body-font">
+        <div class="h-748px w-full bg-cover bg-center" style="background-image: url('img/video.jpg');">
+            <div class="container mx-auto h-full">
+                <div class="flex items-center justify-start h-full">
+                    <div class="text-left">
+                        <h1 class="text-white text-56 font-semibold uppercase">UNLIMITED MOTIVATION</h1>
+                        <p class="text-24 text-white my-24">Meet the best tutors. <br>
+                            Reach your full potential. <br>
+                            Now.</p>
+                        <!-- click this button to open modal -->
+                        <button @click="isDialogOpen = true"
+                            class="inline-flex items-center bg-f-yellow text-white font-medium rounded border-0 py-3 px-9 focus:outline-none hover:shadow-hover text-base mt-4 md:mt-0">>Modal
+                            open<< /button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto py-20">
+            <h2 class="text-48  text-f-dark-blue">Find your motivation, experience the improvement</h2>
+            <h3 class="text-24 mt-8">One of the most important things when you study a language is to stay engaged. <br>
+                <br>
+                But too often, you get distracted, or simply too busy to maintain a high motivation level. <br>
+                <br>
+                At FeliTalk, we hand-pick the most accomplished teachers, and build a user-friendly platform that
+                empowers you to achieve your language learning goals by giving you unlimited motivation.
+            </h3>
+        </div>
+    </section>
+    <footer class="bg-f-dark-blue text-white absolute inset-x-0 bottom-0">
+        <div class="container mx-auto py-10">
+            <div class="flex flex-row mb-14">
+                <div class="flex-col flex-1">
+                    <a class="flex title-font font-medium items-center text-gray-900 mb-10">
+                        <img src="img\book-of-black-cover-closed.svg" alt="" srcset="">
+                        <span class="ml-3 text-logo font-logo text-f-white">FeliTalk</span>
+                    </a>
+                    <a href="#">
+                        <img src="img\facebook 1.svg" alt="facebook link" class="inline-block">
+                    </a>
+                    <a href="#">
+                        <img src="img\instagram 1.svg" alt="instagram link" class="inline-block ml-10">
+                    </a>
+                    <a href="#">
+                        <img src="img\youtube 1.svg" alt="youtube link" class="inline-block ml-10">
+                    </a>
+                </div>
+                <div class="flex-col flex-1">
+                    <h3 class="text-32 font-bold mb-4">Navigation</h3>
+                    <a href="#" class="text-24 mb-4 block">Features</a>
+                    <a href="#" class="text-24 mb-4 block">Teachers</a>
+                    <a href="#" class="text-24 mb-4 block">Plans</a>
+                    <a href="#" class="text-24 mb-4 block">Lesson materials</a>
+                    <a href="#" class="text-24 block">FAQ</a>
+                </div>
+                <div class="flex-col flex-1">
+                    <h3 class="text-32 font-bold mb-4">Contacts</h3>
+                    <a href="tel:+3 8077 456 32 41" class="text-24 mb-4 block">+3 8077 456 32 41</a>
+                    <a href="mailto:info@felitalk.com" class="text-24 mb-4 block">info@felitalk.com</a>
+                </div>
+                <div class="flex-col flex-1">
+                    <h3 class="text-32 font-bold mb-4">Legal</h3>
+                    <a href="#" class="text-24 mb-4 block">Terms</a>
+                    <a href="#" class="text-24 mb-4 block">Privacy Policy</a>
+                </div>
+            </div>
+            <p class="text-center">Copyright © 2020 Felitalk LLC</p>
+        </div>
+    </footer>
+
+    <!-- overlay -->
+    <div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="isDialogOpen"
+        :class="{ 'absolute inset-0 z-10 flex items-start justify-center': isDialogOpen }">
+        <!-- dialog -->
+        <div class="bg-white rounded p-6 fixed top-24 w-11/12 max-w-md" x-show="isDialogOpen"
+            @click.away="isDialogOpen = false">
+            <div class="flex justify-between items-center text-24 mb-6 space-x-4">
+                <h6 class="font-medium">Success</h6>
+                <button type="button" @click="isDialogOpen = false"><img src="img/x.svg" alt=""></button>
+            </div>
+            <p class="mb-6">Your new password has been succesfully saved.</p>
+            <form name="modal-form" action="#" class="flex flex-col mb-6">
+                                
+                <button class="btn-primary">Log in</button>
+            </form>
+            
+        </div><!-- /dialog -->
+    </div><!-- /overlay -->
+
+
+
+</body>
+
+</html>
