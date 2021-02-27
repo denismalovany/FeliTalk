@@ -80,6 +80,7 @@ module.exports = {
         '16': '0.16',
       },
       padding:{
+        '30px': '1.875rem',
         '60px': '3.75rem',
         '50px': '3.125rem',
       }

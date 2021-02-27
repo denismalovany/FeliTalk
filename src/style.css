@@ -75,4 +75,8 @@
     .tab{
       @apply bg-white inline-block py-2 px-10 text-24 text-f-dark-blue;
     }
+    .input-email{
+      @apply pl-10;
+      background: url(img/mail.svg) no-repeat scroll 10px 10px;
+    }
 }
