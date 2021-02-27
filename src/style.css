@@ -75,8 +75,22 @@
     .tab{
       @apply bg-white inline-block py-2 px-10 text-24 text-f-dark-blue;
     }
+    .input{
+      @apply flex flex-col mb-2;
+    }
+    .input.alert>span{
+      @apply visible;
+    }
+    .input.alert>input{
+      @apply border-f-red;
+    }
     .input-email{
       @apply pl-10;
       background: url(img/mail.svg) no-repeat scroll 10px 10px;
     }
+    .input-password{
+      @apply pl-10;
+      background: url(img/lock.svg) no-repeat scroll 10px 10px;
+    }
+
 }
