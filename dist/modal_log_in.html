@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
-<body x-data="{ 'isDialogOpen': false }" @keydown.escape="isDialogOpen = false"
+<body x-data="{ 'isDialogOpen': true }" @keydown.escape="isDialogOpen = false"
     class="font-Ubuntu bg-f-white min-h-screen relative pb-468px">
     <!-- state of modal -->
 
@@ -109,7 +109,7 @@
         <!-- dialog -->
         <div class="bg-white rounded p-6 fixed top-24 w-11/12 max-w-md" x-show="isDialogOpen" @click.away="isDialogOpen = false">
             <div class="flex justify-between items-center text-24 mb-6 space-x-4">
-                <h6 class="font-medium">Create my account</h6>
+                <h6 class="font-medium">Log in to your account</h6>
                 <button type="button" @click="isDialogOpen = false"><img src="img/x.svg" alt=""></button>
             </div>
             <form name="modal-form" action="#" class="flex flex-col mb-6">
@@ -119,27 +119,24 @@
                     <span class="invisible text-f-red px-2">Wrong email adress</span>
                 </div>
                 <!-- add alert class to .input to make it red with message -->
-                <div class="input alert">
-                    <label for="email" class="mb-2">Email</label>
-                    <input class="border rounded border-f-light-blue input-email h-10" type="email" name="" id="email" placeholder="Enter your email">
-                    <span class="invisible text-f-red px-2">Wrong email adress</span>
-                </div>
                 <div class="input">
-                    <label for="pass" class="mb-2">Password (at least 8 symbols)</label>
+                    <div class="flex flex-row justify-between">
+                        <label for="pass" class="mb-2">Password</label>
+                        <a class="text-f-yellow hover:underline" href="#" target="_blank" rel="noopener noreferrer">Forgot a password?</a>
+                    </div>
                     <input class="border rounded border-f-light-blue input-password h-10" type="password" name=""
-                        id="pass" placeholder="Create your password">
+                        id="pass" placeholder="Enter your password">
                         <span class="invisible text-f-red px-2">Must be at least  8 symbols</span>
                 </div>
                 <div class="flex items-center mb-10">
                     <input type="checkbox" name="accept" id="accept" class="mr-2">
-                    <label for="accept">I agree with the <a href="#" class="text-f-yellow hover:underline">Terms of
-                            Service</a> & <a href="#" class="text-f-yellow hover:underline">Privacy Policy</a></label>
+                    <label for="accept">Keep me signed in until I sign out</label>
                 </div>
-                <button class="btn-primary">Sign up</button>
+                <button class="btn-primary">Log in</button>
             </form>
             <div class="text-center">
-                <p class="py-6 border-t inline-block">Already have an account? <a href="#"
-                        class="text-f-yellow hover:underline">Log in</a></p>
+                <p class="py-6 border-t inline-block">Not a member yet? <a href="#"
+                        class="text-f-yellow hover:underline">Sign up</a></p>
             </div>
         </div><!-- /dialog -->
     </div><!-- /overlay -->
