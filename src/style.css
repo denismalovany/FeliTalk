@@ -75,14 +75,23 @@
     .tab{
       @apply bg-white inline-block py-2 px-10 text-24 text-f-dark-blue;
     }
+    .tab_small{
+      @apply bg-white inline-block py-2 px-10 text-16 text-f-dark-blue;
+    }
     .input{
       @apply flex flex-col mb-2;
     }
+    /* .input>input{
+      @apply pl-2;
+    } */
     .input.alert>span{
       @apply visible;
     }
     .input.alert>input{
       @apply border-f-red;
+    }
+    .input_no_icon{
+      @apply pl-2;
     }
     .input-email{
       @apply pl-10;
