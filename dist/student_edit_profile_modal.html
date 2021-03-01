@@ -314,7 +314,7 @@
                 <h6 class="font-medium">Edit profile</h6>
                 <button type="button" @click="isDialogOpen = false"><img src="img/x.svg" alt=""></button>
             </div>
-            <div x-data="{ openTab: 2 }" class="">
+            <div x-data="{ openTab: 3 }" class="">
                 <ul class="flex border-b border-f-light-grey">
                     <li @click="openTab = 1" :class="{ '-mb-px': openTab === 1 }" class="mr-1">
                         <a :class="openTab === 1 ? 'tab-active' : 'hover:underline'" class="tab_small" href="#">Personal</a>
@@ -342,17 +342,17 @@
                             <div class="flex flex-row space-x-6">
                                 <div class="flex-1">
                                     <div class="input">
-                                        <label for="email" class="mb-2">Name</label>
+                                        <label for="name" class="mb-2">Name</label>
                                         <input class="border rounded border-f-light-blue h-10 input-no-icon" type="text" name=""
-                                            id="email" placeholder="Your name here">
+                                            id="name" placeholder="Your name here">
                                         <span class="invisible text-f-red px-2">Wrong email adress</span>
                                     </div>
                                 </div>
                                 <div class="flex-1">
                                     <div class="input">
-                                        <label for="email" class="mb-2">Surname</label>
+                                        <label for="Surname" class="mb-2">Surname</label>
                                         <input class="border rounded border-f-light-blue h-10 input-no-icon" type="text" name=""
-                                            id="email" placeholder="Your surname here">
+                                            id="Surname" placeholder="Your surname here">
                                         <span class="invisible text-f-red px-2">Wrong email adress</span>
                                     </div>
                                 </div>
@@ -442,9 +442,33 @@
 
                     </div>
                     <div x-show="openTab === 3" class="pt-4">
-                        <h2 class="text-24 text-f-dark-blue font-medium mb-4">You don't have booked lessons</h2>
-                        <p class="mb-8">But don't worry, you can choose teacher and book a lesson with teacher</p>
-                        <button class="btn-primary w-200px">Book a lesson</button>
+                        <ul class="flex flex-col mb-6">
+                            <li class="flex flex-row justify-between">
+                                <div class="flex flex-row space-x-6 items-center">
+                                    <div class="">
+                                        <img src="img/Mastercard_2019_logo 1.svg" alt="mastercard logo">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <h3 class="font-medium">Card ended</h3>
+                                        <p>Debit Mastercard (9723)</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="font-medium">Expired</h3>
+                                    <p>05/2024)</p>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3 class="font-medium">Cardholder name</h3>
+                                    <p>Daria Malovana</p>
+                                </div>
+                                <button><img src="img/trash-2.svg" alt=""></button>
+                            </li>
+                        </ul>
+                        <button class="btn-transparent px-0 mb-6">Add new card</button>
+                        <div class="flex flex-row space-x-6">
+                            <button class="btn-primary">Save changes</button>
+                            <button class="btn-secondary">Cancel changes</button>
+                        </div>
                     </div>
                 </div>
             </div>
