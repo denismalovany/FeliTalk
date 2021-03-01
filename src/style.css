@@ -90,7 +90,7 @@
   .input.alert>input{
     @apply border-f-red;
   }
-  .input_no_icon{
+  .input-no-icon{
     @apply pl-2;
   }
   .input-email{
