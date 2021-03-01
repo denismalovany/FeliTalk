@@ -339,33 +339,59 @@
                                     <p class="text-f-dark-grey">Allowed JPG, PNG. Max size 1 MB</p>
                                 </div>
                             </div>
-                            <div class="input">
-                                <label for="email" class="mb-2">Name</label>
-                                <input class="border rounded border-f-light-blue h-10 input_no_icon" type="text" name=""
-                                    id="email" placeholder="Your name here">
-                                <span class="invisible text-f-red px-2">Wrong email adress</span>
+                            <div class="flex flex-row space-x-6">
+                                <div class="flex-1">
+                                    <div class="input">
+                                        <label for="email" class="mb-2">Name</label>
+                                        <input class="border rounded border-f-light-blue h-10 input_no_icon" type="text" name=""
+                                            id="email" placeholder="Your name here">
+                                        <span class="invisible text-f-red px-2">Wrong email adress</span>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="input">
+                                        <label for="email" class="mb-2">Surname</label>
+                                        <input class="border rounded border-f-light-blue h-10 input_no_icon" type="text" name=""
+                                            id="email" placeholder="Your surname here">
+                                        <span class="invisible text-f-red px-2">Wrong email adress</span>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="flex flex-row space-x-6 mb-6">
+                                <div class="flex-1">
+                                    <div class="input">
+                                        <label for="email" class="mb-2">Email</label>
+                                        <input class="border rounded border-f-light-blue input-email h-10" type="email" name=""
+                                            id="email" placeholder="Enter your email">
+                                        <span class="invisible text-f-red px-2">Wrong email adress</span>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex flex-col space-y-4">
+                                        <h4>Gender</h4>
+                                        <div class="flex flex-row">
+                                            <label class="container">Male
+                                                <input type="radio" name="gender" id="gender_male">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Female
+                                                <input type="radio" name="gender" id="gender_female">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Non binary
+                                                <input type="radio" name="gender" id="gender_non_binary">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <!-- add alert class to .input to make it red with message -->
-                            <div class="input alert">
-                                <label for="email" class="mb-2">Email</label>
-                                <input class="border rounded border-f-light-blue input-email h-10" type="email" name=""
-                                    id="email" placeholder="Enter your email">
-                                <span class="invisible text-f-red px-2">Wrong email adress</span>
+                            <div class="flex flex-row space-x-6">
+                                <button class="btn-primary">Save changes</button>
+                                <button class="btn-secondary">Cancel changes</button>
                             </div>
-                            <div class="input">
-                                <label for="pass" class="mb-2">Password (at least 8 symbols)</label>
-                                <input class="border rounded border-f-light-blue input-password h-10" type="password"
-                                    name="" id="pass" placeholder="Create your password">
-                                <span class="invisible text-f-red px-2">Must be at least 8 symbols</span>
-                            </div>
-                            <div class="flex items-center mb-10">
-                                <input type="checkbox" name="accept" id="accept" class="mr-2">
-                                <label for="accept">I agree with the <a href="#"
-                                        class="text-f-yellow hover:underline">Terms of
-                                        Service</a> & <a href="#" class="text-f-yellow hover:underline">Privacy
-                                        Policy</a></label>
-                            </div>
-                            <button class="btn-primary">Sign up</button>
                         </form>
                     </div>
                     <div x-show="openTab === 2">
@@ -487,11 +513,6 @@
                         <button class="btn-primary w-200px">Book a lesson</button>
                     </div>
                 </div>
-            </div>
-
-            <div class="text-center">
-                <p class="py-6 border-t inline-block">Already have an account? <a href="#"
-                        class="text-f-yellow hover:underline">Log in</a></p>
             </div>
         </div><!-- /dialog -->
     </div><!-- /overlay -->
