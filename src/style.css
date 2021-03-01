@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
+  button:disabled{
+    @apply opacity-40 cursor-not-allowed;
+  }
   .btn-primary {
     @apply inline items-center bg-f-yellow text-white font-medium rounded border-0 py-3 px-9 focus:outline-none hover:shadow-hover text-base;
   }
@@ -127,4 +130,15 @@
   }
   /* end radio */
 
+  /* testing for stars rating (experimental) */
+  use{
+    fill:#fff;
+  }
+  use.f-star{
+    fill:#FFB703;
+  }
+  svg path {
+    fill: inherit;
+  }
+  /* test end */
 }
