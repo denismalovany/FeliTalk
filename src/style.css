@@ -141,4 +141,11 @@
     fill: inherit;
   }
   /* test end */
+
+  .collapsed{
+    @apply bg-f-16-blue;
+  }
+  .collapsed .collapse-body{
+    @apply flex;
+  }
 }
