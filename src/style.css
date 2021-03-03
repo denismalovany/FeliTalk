@@ -105,10 +105,10 @@
     background: url(img/lock.svg) no-repeat scroll 10px 10px;
   }
     /* custom radio buttons */
-  .container {
+  .custom-radio {
     @apply block relative pl-8 mb-3 cursor-pointer text-16;
   }
-  .container input {
+  .custom-radio input {
     @apply absolute opacity-0 cursor-pointer;
   }
   .checkmark {
@@ -118,10 +118,10 @@
     @apply absolute hidden;
     content: "";
   }
-  .container input:checked ~ .checkmark:after {
+  .custom-radio input:checked ~ .checkmark:after {
     @apply block;
   }
-  .container .checkmark:after {
+  .custom-radio .checkmark:after {
     @apply rounded-full bg-f-blue;
     width:0.625rem;
     height:0.625rem;
