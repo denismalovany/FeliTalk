@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Ubuntu:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <title>Felitalk</title>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
 <body class="font-Ubuntu bg-f-white min-h-screen relative pb-468px">
@@ -38,100 +40,157 @@
             <div class="flex flex-row justify-between items-center mb-6">
                 <h2 class="text-40 font-bold text-f-dark-blue">Lesson materials</h2>
             </div>
-            <div class="mb-10 border-b border-f-light-grey">
-                <nav class="flex flex-row">
-                    <button class="tab-btn-active">
-                        Begginer
-                    </button>
-                    <button class="tab-btn">
-                        Intermediate
-                    </button>
-                    <button class="tab-btn">
-                        Advance
-                    </button>
-                </nav>
-            </div>
-            <div class="flex flex-row space-x-6 mb-6">
-                <div class="flex-1 shadow-medium rounded p-4 max-w-card">
-                    <img src="img\Tokyo-cuate 2.svg" class="w-full mb-4" alt="">
-                    <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
-                        <span class="text-16 font-normal text-f-blue text-center">begginer</span>
+            <div x-data="{ openTab: 1 }" class="">
+                <ul class="flex border-b border-f-light-grey">
+                    <li @click="openTab = 1" :class="{ '-mb-px': openTab === 1 }" class="mr-1">
+                        <a :class="openTab === 1 ? 'tab-active' : 'hover:underline'" class="tab_small" href="#">Movie
+                            clips</a>
+                    </li>
+                    <li @click="openTab = 2" :class="{ '-mb-px': openTab === 2 }" class="mr-1">
+                        <a :class="openTab === 2 ? 'tab-active' : 'hover:underline'" class="tab_small"
+                            href="#">Conversation topics</a>
+                    </li>
+                    <li @click="openTab = 3" :class="{ '-mb-px': openTab === 3 }" class="mr-1">
+                        <a :class="openTab === 3 ? 'tab-active' : 'hover:underline'" class="tab_small" href="#">Daily
+                            news</a>
+                    </li>
+                </ul>
+                <div class="w-full pt-6">
+                    <div x-show="openTab === 1">
+                        <div class="flex flex-wrap">
+                            <div class="videocard w-1/3 p-3">
+                                <div class="flex flex-col border border-f-bcg shadow-medium">
+                                    <div class="videoblock bg-cover bg-center h-40 flex justify-center items-center" style="background-image: url(img/young-asia-businessman-using-computer-laptop-talk-colleagues-about-plan-video-call-meeting-while-working-from-home-living-room-self-isolation-social-distancing-quarantine-corona-virus.jpg);">
+                                        <button class="h-20 w-20 rounded-full bg-f-white bg-opacity-25 flex justify-center items-center cursor-pointer focus:outline-none">
+                                            <div class="rounded-full bg-f-white h-54px w-54px flex justify-center items-center">
+                                                <img src="img\triang.svg" alt="">
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="flex flex-col py-4 px-2">
+                                        <div class="flex flex-row items-start justify-between">
+                                            <h4 class="text-16 font-medium ">Wonder Woman (2017) - Dress Shopping <br/>Scene (4/10) | Movieclips</h4>
+                                            <span class="bg-f-16-blue rounded-full text-f-blue px-2">7:23</span>
+                                        </div>
+                                        <button class="btn-transparent"><span class="mr-2 align-top"><img class="inline" src="img/download.svg" alt="download icon"></span>download material for this video</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="videocard w-1/3 p-3">
+                                <div class="flex flex-col border border-f-bcg shadow-medium">
+                                    <div class="videoblock bg-cover bg-center h-40 flex justify-center items-center" style="background-image: url(img/young-asia-businessman-using-computer-laptop-talk-colleagues-about-plan-video-call-meeting-while-working-from-home-living-room-self-isolation-social-distancing-quarantine-corona-virus.jpg);">
+                                        <button class="h-20 w-20 rounded-full bg-f-white bg-opacity-25 flex justify-center items-center cursor-pointer focus:outline-none">
+                                            <div class="rounded-full bg-f-white h-54px w-54px flex justify-center items-center">
+                                                <img src="img\triang.svg" alt="">
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="flex flex-col py-4 px-2">
+                                        <div class="flex flex-row items-start justify-between">
+                                            <h4 class="text-16 font-medium ">Wonder Woman (2017) - Dress Shopping <br/>Scene (4/10) | Movieclips</h4>
+                                            <span class="bg-f-16-blue rounded-full text-f-blue px-2">7:23</span>
+                                        </div>
+                                        <button class="btn-transparent"><span class="mr-2 align-top"><img class="inline" src="img/download.svg" alt="download icon"></span>download material for this video</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="videocard w-1/3 p-3">
+                                <div class="flex flex-col border border-f-bcg shadow-medium">
+                                    <div class="videoblock bg-cover bg-center h-40 flex justify-center items-center" style="background-image: url(img/young-asia-businessman-using-computer-laptop-talk-colleagues-about-plan-video-call-meeting-while-working-from-home-living-room-self-isolation-social-distancing-quarantine-corona-virus.jpg);">
+                                        <button class="h-20 w-20 rounded-full bg-f-white bg-opacity-25 flex justify-center items-center cursor-pointer focus:outline-none">
+                                            <div class="rounded-full bg-f-white h-54px w-54px flex justify-center items-center">
+                                                <img src="img\triang.svg" alt="">
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="flex flex-col py-4 px-2">
+                                        <div class="flex flex-row items-start justify-between">
+                                            <h4 class="text-16 font-medium ">Wonder Woman (2017) - Dress Shopping <br/>Scene (4/10) | Movieclips</h4>
+                                            <span class="bg-f-16-blue rounded-full text-f-blue px-2">7:23</span>
+                                        </div>
+                                        <button class="btn-transparent"><span class="mr-2 align-top"><img class="inline" src="img/download.svg" alt="download icon"></span>download material for this video</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="videocard w-1/3 p-3">
+                                <div class="flex flex-col border border-f-bcg shadow-medium">
+                                    <div class="videoblock bg-cover bg-center h-40 flex justify-center items-center" style="background-image: url(img/young-asia-businessman-using-computer-laptop-talk-colleagues-about-plan-video-call-meeting-while-working-from-home-living-room-self-isolation-social-distancing-quarantine-corona-virus.jpg);">
+                                        <button class="h-20 w-20 rounded-full bg-f-white bg-opacity-25 flex justify-center items-center cursor-pointer focus:outline-none">
+                                            <div class="rounded-full bg-f-white h-54px w-54px flex justify-center items-center">
+                                                <img src="img\triang.svg" alt="">
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="flex flex-col py-4 px-2">
+                                        <div class="flex flex-row items-start justify-between">
+                                            <h4 class="text-16 font-medium ">Wonder Woman (2017) - Dress Shopping <br/>Scene (4/10) | Movieclips</h4>
+                                            <span class="bg-f-16-blue rounded-full text-f-blue px-2">7:23</span>
+                                        </div>
+                                        <button class="btn-transparent"><span class="mr-2 align-top"><img class="inline" src="img/download.svg" alt="download icon"></span>download material for this video</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-24 font-medium cursor-pointer">Traveling <span><img src="img\arrow-right.svg" class="inline object-center" alt="right-arrow"></span></h3>
-                </div>
-                <div class="flex-1 shadow-medium rounded p-4 max-w-card">
-                    <img src="img\Dia de muertos celebration-cuate 1.svg" class="w-full mb-4" alt="">
-                    <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
-                        <span class="text-16 font-normal text-f-blue text-center"> begginer, intermediate</span>
+                    <div x-show="openTab === 2">
+                        <div class="flex flex-wrap">
+                            <div class="w-1/4 p-3">
+                                <a href="#" link class="flex flex-col border border-f-bcg shadow-medium p-4 items-start">
+                                    <h3 class="text-24 font-medium mb-2">Simple conversation</h3>
+                                    <p class="mb-4">20 lessons </p>
+                                    <img class="" src="img/arrow-right.svg" alt="right_arrow">
+                                </a>
+                            </div>
+                            <div class="w-1/4 p-3">
+                                <a href="#" link class="flex flex-col border border-f-bcg shadow-medium p-4 items-start">
+                                    <h3 class="text-24 font-medium mb-2">Simple conversation</h3>
+                                    <p class="mb-4">20 lessons </p>
+                                    <img class="" src="img/arrow-right.svg" alt="right_arrow">
+                                </a>
+                            </div>
+                            <div class="w-1/4 p-3">
+                                <a href="#" link class="flex flex-col border border-f-bcg shadow-medium p-4 items-start">
+                                    <h3 class="text-24 font-medium mb-2">Simple conversation</h3>
+                                    <p class="mb-4">20 lessons </p>
+                                    <img class="" src="img/arrow-right.svg" alt="right_arrow">
+                                </a>
+                            </div>
+                            <div class="w-1/4 p-3">
+                                <a href="#" link class="flex flex-col border border-f-bcg shadow-medium p-4 items-start">
+                                    <h3 class="text-24 font-medium mb-2">Simple conversation</h3>
+                                    <p class="mb-4">20 lessons </p>
+                                    <img class="" src="img/arrow-right.svg" alt="right_arrow">
+                                </a>
+                            </div>
+                            <div class="w-1/4 p-3">
+                                <a href="#" link class="flex flex-col border border-f-bcg shadow-medium p-4 items-start">
+                                    <h3 class="text-24 font-medium mb-2">Simple conversation</h3>
+                                    <p class="mb-4">20 lessons </p>
+                                    <img class="" src="img/arrow-right.svg" alt="right_arrow">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-24 font-medium cursor-pointer">Foreign culture <span><img src="img\arrow-right.svg" class="inline object-center" alt="right-arrow"></span></h3>
-                </div>
-                <div class="flex-1 shadow-medium rounded p-4 max-w-card">
-                    <img src="img\Tokyo-cuate 2.svg" class="w-full mb-4" alt="">
-                    <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
-                        <span class="text-16 font-normal text-f-blue text-center">begginer</span>
+                    <div x-show="openTab === 3">
+                        <div class="flex flex-wrap">
+                            <div class="w-1/2 p-3 flex flex-col">
+                                <p class="flex border border-f-bcg shadow-medium py-6 justify-center mb-4">
+                                    <img class="w-7/12" src="img/logo-news-in-levels-800px 1.jpg" alt="right_arrow">
+                                </p>
+                                <button class="btn-transparent flex items-center px-0 mb-4">News in levels<span class="inline-block ml-2"><img src="img/external-link.svg" alt="external link icon"></span></button>
+                                <h3 class="font-medium mb-2">How to use the website:</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est id libero volutpat egestas. Nunc consequat leo mi, eget rutrum ligula facilisis sed. Pellentesque vulputate neque nec lectus varius, sagittis fringilla tortor interdum. Pellentesque ut venenatis elit. Quisque quis tincidunt mauris, vel varius sem. Maecenas non massa ut odio molestie dignissim. Duis in nibh sed diam pretium malesuada vitae non odio. Praesent mollis molestie elit ac ultrices. Ut vulputate tellus nec risus aliquam tincidunt. Morbi nisi diam, semper id erat porttitor, semper pulvinar mi. Donec ac luctus orci, nec egestas quam. Aliquam erat volutpat. Nulla placerat ligula luctus diam pulvinar, non rutrum justo scelerisque. Aenean hendrerit at urna a finibus.</p>
+                            </div>
+                            <div class="w-1/2 p-3 flex flex-col">
+                                <p class="flex border border-f-bcg shadow-medium py-6 justify-center mb-4">
+                                    <img class="w-7/12" src="img/logo-news-in-levels-800px 1.jpg" alt="right_arrow">
+                                </p>
+                                <button class="btn-transparent flex items-center px-0 mb-4">News in levels<span class="inline-block ml-2"><img src="img/external-link.svg" alt="external link icon"></span></button>
+                                <h3 class="font-medium mb-2">How to use the website:</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est id libero volutpat egestas. Nunc consequat leo mi, eget rutrum ligula facilisis sed. Pellentesque vulputate neque nec lectus varius, sagittis fringilla tortor interdum. Pellentesque ut venenatis elit. Quisque quis tincidunt mauris, vel varius sem. Maecenas non massa ut odio molestie dignissim. Duis in nibh sed diam pretium malesuada vitae non odio. Praesent mollis molestie elit ac ultrices. Ut vulputate tellus nec risus aliquam tincidunt. Morbi nisi diam, semper id erat porttitor, semper pulvinar mi. Donec ac luctus orci, nec egestas quam. Aliquam erat volutpat. Nulla placerat ligula luctus diam pulvinar, non rutrum justo scelerisque. Aenean hendrerit at urna a finibus.</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-24 font-medium cursor-pointer">Traveling <span><img src="img\arrow-right.svg" class="inline object-center" alt="right-arrow"></span></h3>
-                </div>
-                <div class="flex-1 shadow-medium rounded p-4 max-w-card">
-                    <img src="img\Dia de muertos celebration-cuate 1.svg" class="w-full mb-4" alt="">
-                    <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
-                        <span class="text-16 font-normal text-f-blue text-center"> begginer, intermediate</span>
-                    </div>
-                    <h3 class="text-24 font-medium cursor-pointer">Foreign culture <span><img src="img\arrow-right.svg" class="inline object-center" alt="right-arrow"></span></h3>
-                </div>
-            </div>
-            <div class="flex flex-row space-x-6 mb-6">
-                <div class="flex-1 shadow-medium rounded p-4 max-w-card">
-                    <img src="img\Tokyo-cuate 2.svg" class="w-full mb-4" alt="">
-                    <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
-                        <span class="text-16 font-normal text-f-blue text-center">begginer</span>
-                    </div>
-                    <h3 class="text-24 font-medium cursor-pointer">Traveling <span><img src="img\arrow-right.svg" class="inline object-center" alt="right-arrow"></span></h3>
-                </div>
-                <div class="flex-1 shadow-medium rounded p-4 max-w-card">
-                    <img src="img\Dia de muertos celebration-cuate 1.svg" class="w-full mb-4" alt="">
-                    <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
-                        <span class="text-16 font-normal text-f-blue text-center"> begginer, intermediate</span>
-                    </div>
-                    <h3 class="text-24 font-medium cursor-pointer">Foreign culture <span><img src="img\arrow-right.svg" class="inline object-center" alt="right-arrow"></span></h3>
-                </div>
-                <div class="flex-1 shadow-medium rounded p-4 max-w-card">
-                    <img src="img\Tokyo-cuate 2.svg" class="w-full mb-4" alt="">
-                    <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
-                        <span class="text-16 font-normal text-f-blue text-center">begginer</span>
-                    </div>
-                    <h3 class="text-24 font-medium cursor-pointer">Traveling <span><img src="img\arrow-right.svg" class="inline object-center" alt="right-arrow"></span></h3>
-                </div>
-                <div class="flex-1 shadow-medium rounded p-4 max-w-card">
-                    <img src="img\Dia de muertos celebration-cuate 1.svg" class="w-full mb-4" alt="">
-                    <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
-                        <span class="text-16 font-normal text-f-blue text-center"> begginer, intermediate</span>
-                    </div>
-                    <h3 class="text-24 font-medium cursor-pointer">Foreign culture <span><img src="img\arrow-right.svg" class="inline object-center" alt="right-arrow"></span></h3>
-                </div>
-            </div>
-            <div class="flex flex-row space-x-6 mb-6">
-                <div class="flex-1 shadow-medium rounded p-4 max-w-card">
-                    <img src="img\Tokyo-cuate 2.svg" class="w-full mb-4" alt="">
-                    <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
-                        <span class="text-16 font-normal text-f-blue text-center">begginer</span>
-                    </div>
-                    <h3 class="text-24 font-medium cursor-pointer">Traveling <span><img src="img\arrow-right.svg" class="inline object-center" alt="right-arrow"></span></h3>
-                </div>
-                <div class="flex-1 shadow-medium rounded p-4 max-w-card">
-                    <img src="img\Dia de muertos celebration-cuate 1.svg" class="w-full mb-4" alt="">
-                    <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
-                        <span class="text-16 font-normal text-f-blue text-center"> begginer, intermediate</span>
-                    </div>
-                    <h3 class="text-24 font-medium cursor-pointer">Foreign culture <span><img src="img\arrow-right.svg" class="inline object-center" alt="right-arrow"></span></h3>
-                </div>
-                <div class="flex-1 shadow-medium rounded p-4 max-w-card">
-                    <img src="img\Dia de muertos celebration-cuate 1.svg" class="w-full mb-4" alt="">
-                    <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
-                        <span class="text-16 font-normal text-f-blue text-center"> begginer, intermediate</span>
-                    </div>
-                    <h3 class="text-24 font-medium cursor-pointer">Foreign culture <span><img src="img\arrow-right.svg" class="inline object-center" alt="right-arrow"></span></h3>
                 </div>
             </div>
         </div>
@@ -165,7 +224,7 @@
                 <div class="flex-col flex-1">
                     <h3 class="text-32 font-bold mb-4">Contacts</h3>
                     <a href="tel:+3 8077 456 32 41" class="text-24 mb-4 block">+3 8077 456 32 41</a>
-                    <a href="mailto:info@felitalk.com"  class="text-24 mb-4 block">info@felitalk.com</a>
+                    <a href="mailto:info@felitalk.com" class="text-24 mb-4 block">info@felitalk.com</a>
                 </div>
                 <div class="flex-col flex-1">
                     <h3 class="text-32 font-bold mb-4">Legal</h3>
