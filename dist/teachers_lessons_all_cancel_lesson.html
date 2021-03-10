@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Ubuntu:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <title>Felitalk</title>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body x-data="{ 'isDialogOpen': true }" @keydown.escape="isDialogOpen = false" class="font-Ubuntu bg-f-white min-h-screen fixed">
+    <div class="md:flex flex-col md:flex-row md:min-h-screen w-full">
+        <div @click.away="open = false"
+            class="flex flex-col w-full md:w-96 text-f-white bg-f-dark-blue flex-shrink-0 pl-60px py-60px"
+            x-data="{ open: false }">
+            <div class="flex-shrink-0 px-6 flex flex-row items-center justify-between">
+                <a class="flex title-font font-medium items-center text-gray-900 mb-16">
+                    <img src="img\book-of-black-cover-closed.svg" alt="" srcset="">
+                    <span class="ml-3 text-logo font-logo text-f-white">FeliTalk</span>
+                </a>
+                <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'block': open, 'hidden': !open}"
+                class="flex-grow md:block pr-4 pb-4 md:pb-0 md:overflow-y-auto">
+                <a class="sidebar-li-active" href="#"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M9 22V12H15V22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>Profile</a>
+                <a class="sidebar-li" href="#"><span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>List of teachers</a>
+                <a class="sidebar-li" href="#"><span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1V23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>Subscription</a>
+                <a class="sidebar-li" href="#"><span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14 2V8H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>My lessons</a>
+                <a class="sidebar-li" href="#"><span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7V21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H2V3Z"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M22 3H16C14.9391 3 13.9217 3.42143 13.1716 4.17157C12.4214 4.92172 12 5.93913 12 7V21C12 20.2044 12.3161 19.4413 12.8787 18.8787C13.4413 18.3161 14.2044 18 15 18H22V3Z"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>Lesson materials</a>
+                <a class="sidebar-li" href="#"><span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 16V12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 8H12.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>Help</a>
+                <a class="sidebar-li" href="#"><span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 17L21 12L16 7" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M21 12H9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>Log out</a>
+            </nav>
+            <div class="flex flex-row space-x-4">
+                <div class="w-16"><img class="rounded-full" src="img\user avatar.jpg" alt=""></div>
+                <div class="flex flex-col">
+                    <h4 class="font-medium mt-1.5">Daria Malovana</h4>
+                    <p class="text-f-light-blue">Student</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-100-384px overflow-auto max-h-screen py-12 px-6">
+            <h1 class="text-32 text-f-dark-blue font-bold mb-6">My lessons</h1>
+            <!-- just for opening modal -->
+            <button @click="isDialogOpen = true" class="btn-primary">Open modal</button>
+            <div x-data="{ openTab: 1 }" class="">
+                <ul class="flex border-b border-f-light-grey">
+                    <li @click="openTab = 1" :class="{ '-mb-px': openTab === 1 }" class="mr-1">
+                        <a :class="openTab === 1 ? 'tab-active' : 'hover:underline'" class="tab" href="#">All</a>
+                    </li>
+                    <li @click="openTab = 2" :class="{ '-mb-px': openTab === 2 }" class="mr-1">
+                        <a :class="openTab === 2 ? 'tab-active' : 'hover:underline'" class="tab" href="#">Upcoming</a>
+                    </li>
+                    <li @click="openTab = 3" :class="{ '-mb-px': openTab === 3 }" class="mr-1">
+                        <a :class="openTab === 3 ? 'tab-active' : 'hover:underline'" class="tab" href="#">Completed</a>
+                    </li>
+                </ul>
+                <div class="w-full pt-6">
+                    <div x-show="openTab === 1">
+                        <div class="flex flex-row space-x-6 items-start">
+                            <div class="flex flex-col w-2/3">
+                                <div
+                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between rounded mb-6">
+                                    <div class="flex flex-col space-y-6">
+                                        <div>
+                                            <p class="text-16 text-f-blue bg-f-16-blue inline px-2.5 rounded-full py-1">
+                                                Upcoming lesson</p>
+                                        </div>
+                                        <div class="flex flex-row">
+                                            <div class="flex-col pr-6 border-r border-f-light-grey">
+                                                <p class="text-32 font-medium">09</p>
+                                                <p class="text-16 font-medium">Jan</p>
+                                            </div>
+                                            <div class="flex-col pl-6">
+                                                <p class="text-32">09:30</p>
+                                                <p class="text-16 text-f-grey">With <span
+                                                        class="text-f-yellow">Alexandra</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col space-y-6">
+                                        <button class="btn-primary">Join a class</button>
+                                        <button class="btn-secondary">Cancel lesson!!!</button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    <div class="flex flex-col space-y-6">
+                                        <div>
+                                            <p class="text-16 text-f-blue bg-f-16-blue inline px-2.5 rounded-full py-1">
+                                                Upcoming lesson</p>
+                                        </div>
+                                        <div class="flex flex-row">
+                                            <div class="flex-col pr-6 border-r border-f-light-grey">
+                                                <p class="text-32 font-medium">09</p>
+                                                <p class="text-16 font-medium">Jan</p>
+                                            </div>
+                                            <div class="flex-col pl-6">
+                                                <p class="text-32">09:30</p>
+                                                <p class="text-16 text-f-grey">With <span
+                                                        class="text-f-yellow">Alexandra</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col space-y-6">
+                                        <button class="btn-secondary">Cancel lesson</button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    <div class="flex flex-col space-y-6">
+                                        <div>
+                                            <p
+                                                class="text-16 text-f-dark-grey bg-f-16-grey inline px-2.5 rounded-full py-1">
+                                                Completed lesson</p>
+                                        </div>
+                                        <div class="flex flex-row">
+                                            <div class="flex-col pr-6 border-r border-f-light-grey">
+                                                <p class="text-32 font-medium">09</p>
+                                                <p class="text-16 font-medium">Jan</p>
+                                            </div>
+                                            <div class="flex-col pl-6">
+                                                <p class="text-32">09:30</p>
+                                                <p class="text-16 text-f-grey">With <span
+                                                        class="text-f-yellow">Alexandra</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col space-y-6">
+                                        <button class="btn-secondary">Cancel lesson</button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    <div class="flex flex-col space-y-6">
+                                        <div>
+                                            <p
+                                                class="text-16 text-f-dark-grey bg-f-16-grey inline px-2.5 rounded-full py-1">
+                                                Completed lesson</p>
+                                        </div>
+                                        <div class="flex flex-row">
+                                            <div class="flex-col pr-6 border-r border-f-light-grey">
+                                                <p class="text-32 font-medium">09</p>
+                                                <p class="text-16 font-medium">Jan</p>
+                                            </div>
+                                            <div class="flex-col pl-6">
+                                                <p class="text-32">09:30</p>
+                                                <p class="text-16 text-f-grey">With <span
+                                                        class="text-f-yellow">Alexandra</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col space-y-6">
+                                        <p class="text-16 text-f-dark-grey font-medium">Cancelled lesson</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col w-1/3 bg-f-very-light-blue shadow-medium p-6 rounded">
+                                <h4 class="mb-2">Active subscription <span class="items-center"><img class="inline"
+                                            src="img\info_y.svg" alt=""></span></h4>
+                                <h3 class="text-24 text-f-dark-blue font-medium mb-4">Basic plan</h3>
+                                <div class="flex flex-row justify-between mb-4">
+                                    <p>25 mins <span><img class="inline" src="img\dot.svg" alt=""></span> 5 lessons</p>
+                                    <p>2 lessons left</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="overflow-hidden h-1 mb-4 text-xs flex rounded bg-f-light-blue">
+                                        <div style="width:30%"
+                                            class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-f-blue">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-transparent mb-6">Book a lesson</button>
+                                <div class="block border-t border-f-light-blue mb-6"></div>
+                                <h4 class="mb-2">Additional lessons <span class="items-center"><img class="inline"
+                                            src="img\info_y.svg" alt=""></span></h4>
+                                <h3 class="text-24 text-f-dark-blue font-medium mb-4">2 lessons</h3>
+                                <button class="btn-transparent">Book additional lesson</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="openTab === 2">
+                        <div class="flex flex-row space-x-6 items-start">
+                            <div class="flex flex-col w-2/3">
+                                <div
+                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between rounded mb-6">
+                                    <div class="flex flex-col space-y-6">
+                                        <div>
+                                            <p class="text-16 text-f-blue bg-f-16-blue inline px-2.5 rounded-full py-1">
+                                                Upcoming lesson</p>
+                                        </div>
+                                        <div class="flex flex-row">
+                                            <div class="flex-col pr-6 border-r border-f-light-grey">
+                                                <p class="text-32 font-medium">09</p>
+                                                <p class="text-16 font-medium">Jan</p>
+                                            </div>
+                                            <div class="flex-col pl-6">
+                                                <p class="text-32">09:30</p>
+                                                <p class="text-16 text-f-grey">With <span
+                                                        class="text-f-yellow">Alexandra</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col space-y-6">
+                                        <button class="btn-primary">Join a class</button>
+                                        <button class="btn-secondary">Cancel lesson</button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    <div class="flex flex-col space-y-6">
+                                        <div>
+                                            <p class="text-16 text-f-blue bg-f-16-blue inline px-2.5 rounded-full py-1">
+                                                Upcoming lesson</p>
+                                        </div>
+                                        <div class="flex flex-row">
+                                            <div class="flex-col pr-6 border-r border-f-light-grey">
+                                                <p class="text-32 font-medium">09</p>
+                                                <p class="text-16 font-medium">Jan</p>
+                                            </div>
+                                            <div class="flex-col pl-6">
+                                                <p class="text-32">09:30</p>
+                                                <p class="text-16 text-f-grey">With <span
+                                                        class="text-f-yellow">Alexandra</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col space-y-6">
+                                        <button class="btn-secondary">Cancel lesson</button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    <div class="flex flex-col space-y-6">
+                                        <div>
+                                            <p
+                                                class="text-16 text-f-dark-grey bg-f-16-grey inline px-2.5 rounded-full py-1">
+                                                Completed lesson</p>
+                                        </div>
+                                        <div class="flex flex-row">
+                                            <div class="flex-col pr-6 border-r border-f-light-grey">
+                                                <p class="text-32 font-medium">09</p>
+                                                <p class="text-16 font-medium">Jan</p>
+                                            </div>
+                                            <div class="flex-col pl-6">
+                                                <p class="text-32">09:30</p>
+                                                <p class="text-16 text-f-grey">With <span
+                                                        class="text-f-yellow">Alexandra</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col space-y-6">
+                                        <button class="btn-secondary">Cancel lesson</button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    <div class="flex flex-col space-y-6">
+                                        <div>
+                                            <p
+                                                class="text-16 text-f-dark-grey bg-f-16-grey inline px-2.5 rounded-full py-1">
+                                                Completed lesson</p>
+                                        </div>
+                                        <div class="flex flex-row">
+                                            <div class="flex-col pr-6 border-r border-f-light-grey">
+                                                <p class="text-32 font-medium">09</p>
+                                                <p class="text-16 font-medium">Jan</p>
+                                            </div>
+                                            <div class="flex-col pl-6">
+                                                <p class="text-32">09:30</p>
+                                                <p class="text-16 text-f-grey">With <span
+                                                        class="text-f-yellow">Alexandra</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col space-y-6">
+                                        <p class="text-16 text-f-dark-grey font-medium">Cancelled lesson</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col w-1/3 bg-f-very-light-blue shadow-medium p-6 rounded">
+                                <h4 class="mb-2">Active subscription <span class="items-center"><img class="inline"
+                                            src="img\info_y.svg" alt=""></span></h4>
+                                <h3 class="text-24 text-f-dark-blue font-medium mb-4">You don't have active subscription</h3>
+                                <button class="btn-transparent mb-6">Buy a plan</button>
+                                <div class="block border-t border-f-light-blue mb-6"></div>
+                                <h4 class="mb-2">Additional lessons <span class="items-center"><img class="inline"
+                                            src="img\info_y.svg" alt=""></span></h4>
+                                <h3 class="text-24 text-f-dark-blue font-medium mb-4">2 lessons</h3>
+                                <button class="btn-transparent">Book additional lesson</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="openTab === 3" class="pt-4">
+                        <h2 class="text-24 text-f-dark-blue font-medium mb-4">You don't have booked lessons</h2>
+                        <p class="mb-8">But don't worry, you can choose teacher and book a lesson with teacher</p>
+                        <button class="btn-primary w-200px">Book a lesson</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="isDialogOpen"
+    :class="{ 'absolute inset-0 z-10 flex items-start justify-center': isDialogOpen }">
+    <!-- dialog -->
+    <div class="bg-white rounded p-6 fixed top-24 w-11/12 max-w-3xl" x-show="isDialogOpen"
+        @click.away="isDialogOpen = false">
+        <div class="flex justify-between items-center text-24 mb-6 space-x-4">
+            <h6 class="font-medium">Cancel lesson</h6>
+            <button type="button" @click="isDialogOpen = false"><img src="img/x.svg" alt=""></button>
+        </div>
+        <div class="flex flex-row text-f-white bg-f-dark-blue p-6 items-center space-x-4 rounded mb-6">
+            <div class="w-88px h-88px"><img class="rounded-full" src="img/teacher.jpg" alt="teacher avatar"></div>
+            <div class="flex flex-col space-y-4">
+                <p>25 min lesson with Alexandra</p>
+                <p>Friday, December 23, 2020 / 08:00 - 08:25</p>
+            </div>
+        </div>
+        <p class="mb-10 text-f-red">Are you sure that you want to cancel this lesson?</p>
+        <p class="mb-2">Penalty if a lesson is canceled less than 24 hours before its start:</p>
+        <p class="flex items-center"><span class="mr-2"><img src="img/dot.svg" alt=""></span>Penalty 1</p>
+        <p class="flex items-center"><span class="mr-2"><img src="img/dot.svg" alt=""></span>Penalty 2</p>
+        <div class="flex flex-row space-x-6 mt-6">
+            <button class="btn-primary">Yes, cancel lesson</button>
+            <button class="btn-secondary">No, leave lesson</button>
+        </div>
+    </div><!-- /dialog -->
+</div><!-- /overlay -->
+
+</body>
+
+</html>
