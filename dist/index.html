@@ -12,22 +12,22 @@
     <title>Felitalk</title>
 </head>
 
-<body class="relative min-h-screen font-Ubuntu bg-f-white pb-468px">
+<body class="relative min-h-screen font-Ubuntu bg-f-white pb-468px lg:pb-615px">
     <header class="text-gray-600 body-font">
-        <div class="container flex flex-row flex-wrap items-center py-4 mx-auto">
+        <div class="container flex flex-row items-center py-4 mx-auto">
             <a class="flex items-center font-medium text-gray-900 title-font">
                 <img src="img\book-of-black-cover-closed.svg" alt="" srcset="">
-                <span class="ml-3 text-logo font-logo text-f-dark-blue">FeliTalk</span>
+                <span class="ml-3 text-logo font-logo text-f-dark-blue lg:hidden">FeliTalk</span>
             </a>
-            <nav class="flex flex-wrap items-center justify-center mx-auto text-base font-normal">
-                <a class="mr-5 font-medium hover:text-gray-900 header-active">Features</a>
-                <a class="mr-5 hover:text-gray-900">Teachers</a>
-                <a class="mr-5 hover:text-gray-900">Plans</a>
-                <a class="mr-5 hover:text-gray-900">Lesson materials</a>
-                <a class="mr-5 hover:text-gray-900">FAQ</a>
+            <nav class="flex flex-wrap items-center justify-center mx-auto space-x-5 text-base font-normal">
+                <a class="font-medium hover:text-gray-900 header-active">Features</a>
+                <a class="hover:text-gray-900">Teachers</a>
+                <a class="hover:text-gray-900">Plans</a>
+                <a class="hover:text-gray-900">Lesson materials</a>
+                <a class="hover:text-gray-900">FAQ</a>
             </nav>
-            <button class="btn-transparent">Log in</button>
-            <button class="btn-primary">Yes, cancel lesson</button>
+            <button class="btn-transparent lg:px-2">Log in</button>
+            <button class="btn-primary">Free trial lesson</button>
         </div>
     </header>
     <section class="text-gray-600 body-font">
@@ -82,8 +82,8 @@
                 <h2 class="font-bold text-40">Meet the teachers</h2>
                 <a href="#" target="_blank" rel="noopener noreferrer" class="font-medium text-f-yellow text-16 hover:underline">Meet all teachers</a>
             </div>
-            <div class="flex flex-row justify-between mt-6">
-                <div class="flex flex-col w-1/4 text-center max-w-312px">
+            <div class="flex flex-wrap mt-6">
+                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px">
                         <img src="img\teacher.jpg" class="object-cover w-full h-full mx-auto rounded-full max-h-312px" alt="teachers profile picture">
                         <h3 class="mt-4 font-normal text-24">Alexandra</h3>
                         <div class="flex flex-row justify-center w-full my-3">
@@ -100,7 +100,7 @@
                             <span class="ml-2 font-normal text-18">Philippines</span>
                         </div>
                 </div>
-                <div class="flex flex-col w-1/4 text-center max-w-312px">
+                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px">
                         <img src="img\teacher.jpg" class="object-cover w-full h-full mx-auto rounded-full max-h-312px" alt="teachers profile picture">
                         <h3 class="mt-4 font-normal text-24">Alexandra</h3>
                         <div class="flex flex-row justify-center w-full my-3">
@@ -117,7 +117,7 @@
                             <span class="ml-2 font-normal text-18">Philippines</span>
                         </div>
                 </div>
-                <div class="flex flex-col w-1/4 text-center max-w-312px">
+                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px">
                         <img src="img\teacher.jpg" class="object-cover w-full h-full mx-auto rounded-full max-h-312px" alt="teachers profile picture">
                         <h3 class="mt-4 font-normal text-24">Alexandra</h3>
                         <div class="flex flex-row justify-center w-full my-3">
@@ -134,7 +134,7 @@
                             <span class="ml-2 font-normal text-18">Philippines</span>
                         </div>
                 </div>
-                <div class="flex flex-col w-1/4 text-center max-w-312px">
+                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px">
                         <img src="img\teacher.jpg" class="object-cover w-full h-full mx-auto rounded-full max-h-312px" alt="teachers profile picture">
                         <h3 class="mt-4 font-normal text-24">Alexandra</h3>
                         <div class="flex flex-row justify-center w-full my-3">
@@ -224,7 +224,7 @@
     <section>
         <div class="container mx-auto py-36 text-f-dark-blue">
             <h2 class="mb-6 font-bold text-40">Reviews</h2>
-            <div class="flex flex-row space-x-6">
+            <div class="flex flex-row space-x-6 lg:flex-col lg:space-x-0 lg:space-y-6">
                 <div class="flex-1">
                     <div class="p-4 mb-5 rounded shadow-medium">
                         <p class="font-normal text-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget tincidunt enim gravida at. Fusce at bibendum erat. Nullam convallis urna ac tortor condimentum, vitae fermentum urna mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam dapibus, dolor eu efficitur sollicitudin, sapien purus laoreet lacus, sed pretium quam diam nec est pretium. </p>
@@ -353,7 +353,7 @@
             </div>
             <div class="flex flex-row space-x-6">
                 <div class="flex-col flex-1 space-y-6">
-                    <div class="px-6 rounded bg-f-dark-blue py-28 h-96">
+                    <div class="px-6 rounded bg-f-dark-blue py-28 h-96 lg:py-11">
                         <h3 class="mb-6 font-bold text-40 text-f-white">Our youtube video</h3>
                         <p class="text-24 text-f-white">Every video is made to explain how our school is working and what we prepare for you</p>
                     </div>
@@ -446,7 +446,7 @@
         </div>
     </section>
     <section>
-        <div class="container mx-auto mb-32 bg-center bg-no-repeat bg-contain bg-team py-28 px-60">
+        <div class="container mx-auto mb-32 bg-center bg-no-repeat bg-contain bg-team py-28 px-60 lg:px-32">
             <h2 class="mb-6 font-bold text-32 text-f-dark-blue">Get free trial lesson</h2>
             <ul class="mb-6">
                 <li class="mb-4">👋  Get to know</li>
@@ -458,8 +458,8 @@
     </section>
     <footer class="absolute inset-x-0 bottom-0 text-white bg-f-dark-blue">
         <div class="container py-10 mx-auto">
-            <div class="flex flex-row mb-14">
-                <div class="flex-col flex-1">
+            <div class="flex flex-row mb-14 lg:flex-wrap lg:space-y-6">
+                <div class="flex-col flex-1 lg:w-full lg:flex-auto">
                     <a class="flex items-center mb-10 font-medium text-gray-900 title-font">
                         <img src="img\book-of-black-cover-closed.svg" alt="" srcset="">
                         <span class="ml-3 text-logo font-logo text-f-white">FeliTalk</span>
