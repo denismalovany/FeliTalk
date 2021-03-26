@@ -2,23 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
+  .container{
+    @apply px-4;
+  }
   button:disabled{
-    @apply opacity-40 cursor-not-allowed;
+    @apply cursor-not-allowed opacity-40;
   }
   .btn-primary {
-    @apply inline items-center bg-f-yellow text-white font-medium rounded border-0 py-3 px-9 focus:outline-none hover:shadow-hover text-base;
+    @apply items-center inline py-3 text-base font-medium text-white border-0 rounded bg-f-yellow px-9 focus:outline-none hover:shadow-hover;
   }
   .btn-secondary {
-    @apply inline items-center bg-transparent text-f-yellow font-medium rounded border-2 border-f-yellow py-3 px-9 focus:outline-none hover:underline text-base;
+    @apply items-center inline py-3 text-base font-medium bg-transparent border-2 rounded text-f-yellow border-f-yellow px-9 focus:outline-none hover:underline;
   }
   .btn-transparent {
-    @apply inline items-center bg-transparent text-f-yellow font-medium rounded border-0 py-3 px-9 focus:outline-none hover:underline text-base;
+    @apply items-center inline py-3 text-base font-medium bg-transparent border-0 rounded text-f-yellow px-9 focus:outline-none hover:underline;
   }
   .breadcrumps-row{
     @apply flex flex-row text-f-grey;
   }
   .breadcrumps-row>*{
-    @apply text-16 mx-4;
+    @apply mx-4 text-16;
   }
   .breadcrumps-row>a{
     @apply text-f-blue hover:underline;
@@ -30,10 +33,10 @@
     max-width: calc(25% - 1.125rem);
   }
   .tab-btn-active{
-    @apply  text-f-dark-blue text-24 py-4 px-6 block focus:outline-none border-b-4 font-medium border-f-blue;
+    @apply  block px-6 py-4 font-medium border-b-4 text-f-dark-blue text-24 focus:outline-none border-f-blue;
   }
   .tab-btn{
-    @apply text-f-dark-blue text-24 py-4 px-6 block focus:outline-none font-normal hover:underline;
+    @apply block px-6 py-4 font-normal text-f-dark-blue text-24 focus:outline-none hover:underline;
   }
   .header-active{
     display:inline-block;
@@ -55,31 +58,31 @@
 
   }
   .inactive-date-calendar{
-    @apply text-16 text-f-grey cursor-not-allowed;
+    @apply cursor-not-allowed text-16 text-f-grey;
   }
   .active-date-calendar{
-    @apply text-16 text-f-blue font-medium cursor-pointer;
+    @apply font-medium cursor-pointer text-16 text-f-blue;
   }
   .sidebar-li{
-    @apply block pl-5 py-3 mt-2 text-16 font-medium text-f-white bg-transparent rounded-r-sm rounded-l-full hover:underline focus:underline focus:outline-none;
+    @apply block py-3 pl-5 mt-2 font-medium bg-transparent rounded-l-full rounded-r-sm text-16 text-f-white hover:underline focus:underline focus:outline-none;
   }
   .sidebar-li svg{
-    @apply inline stroke-current text-f-white mr-4;
+    @apply inline mr-4 stroke-current text-f-white;
   }
   .sidebar-li-active{
-    @apply block pl-5 py-3 mt-2 text-16 font-medium text-f-dark-blue bg-f-white rounded-r-sm rounded-l-full hover:underline focus:underline focus:outline-none;
+    @apply block py-3 pl-5 mt-2 font-medium rounded-l-full rounded-r-sm text-16 text-f-dark-blue bg-f-white hover:underline focus:underline focus:outline-none;
   }
   .sidebar-li-active svg{
-    @apply inline stroke-current text-f-dark-blue mr-4;
+    @apply inline mr-4 stroke-current text-f-dark-blue;
   }
   .tab-active{
     @apply font-medium border-b-4 border-f-blue;
   }
   .tab{
-    @apply bg-white inline-block py-2 px-10 text-24 text-f-dark-blue;
+    @apply inline-block px-10 py-2 bg-white text-24 text-f-dark-blue;
   }
   .tab_small{
-    @apply bg-white inline-block py-2 px-10 text-16 text-f-dark-blue;
+    @apply inline-block px-10 py-2 bg-white text-16 text-f-dark-blue;
   }
   .input{
     @apply flex flex-col mb-2;
@@ -106,13 +109,13 @@
   }
     /* custom radio buttons */
   .custom-radio {
-    @apply block relative pl-8 mb-3 cursor-pointer text-16;
+    @apply relative block pl-8 mb-3 cursor-pointer text-16;
   }
   .custom-radio input {
     @apply absolute opacity-0 cursor-pointer;
   }
   .checkmark {
-    @apply absolute top-0 left-0 h-6 w-6 border-f-blue border rounded-full;
+    @apply absolute top-0 left-0 w-6 h-6 border rounded-full border-f-blue;
   }
   .checkmark:after {
     @apply absolute hidden;
