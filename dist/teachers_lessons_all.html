@@ -14,20 +14,20 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
-<body class="font-Ubuntu bg-f-white min-h-screen fixed">
-    <div class="flex flex-row min-h-screen w-full">
+<body class="fixed min-h-screen font-Ubuntu bg-f-white">
+    <div class="flex flex-row w-full min-h-screen">
         <div @click.away="open = false"
-            class="flex flex-col w-96 text-f-white bg-f-dark-blue flex-shrink-0 pl-60px py-60px"
+            class="flex flex-col flex-shrink-0 w-96 text-f-white bg-f-dark-blue pl-60px py-60px"
             x-data="{ open: false }">
-            <div class="flex-shrink-0 px-6 flex flex-row items-center justify-between">
-                <a class="flex title-font font-medium items-center text-gray-900 mb-16">
+            <div class="flex flex-row items-center justify-between flex-shrink-0 px-6">
+                <a class="flex items-center mb-16 font-medium text-gray-900 title-font">
                     <img src="img\book-of-black-cover-closed.svg" alt="" srcset="">
                     <span class="ml-3 text-logo font-logo text-f-white">FeliTalk</span>
                 </a>
                 
             </div>
             <nav 
-                class="flex-grow pr-4 pb-0 overflow-y-auto">
+                class="flex-grow pb-0 pr-4 overflow-y-auto">
                 <a class="sidebar-li-active" href="#"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -106,8 +106,8 @@
                 </div>
             </div>
         </div>
-        <div class="w-100-384px overflow-auto max-h-screen py-12 px-6">
-            <h1 class="text-32 text-f-dark-blue font-bold mb-6">My lessons</h1>
+        <div class="max-h-screen px-6 py-12 overflow-auto w-100-384px">
+            <h1 class="mb-6 font-bold text-32 text-f-dark-blue">My lessons</h1>
             <div x-data="{ openTab: 1 }" class="">
                 <ul class="flex border-b border-f-light-grey">
                     <li @click="openTab = 1" :class="{ '-mb-px': openTab === 1 }" class="mr-1">
@@ -122,10 +122,10 @@
                 </ul>
                 <div class="w-full pt-6">
                     <div x-show="openTab === 1">
-                        <div class="flex flex-row space-x-6 items-start">
+                        <div class="flex flex-row items-start space-x-6">
                             <div class="flex flex-col w-2/3">
                                 <div
-                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between rounded mb-6">
+                                    class="flex flex-row justify-between p-6 mb-6 border rounded shadow-medium border-f-bcg">
                                     <div class="flex flex-col space-y-6">
                                         <div>
                                             <p class="text-16 text-f-blue bg-f-16-blue inline px-2.5 rounded-full py-1">
@@ -133,8 +133,8 @@
                                         </div>
                                         <div class="flex flex-row">
                                             <div class="flex-col pr-6 border-r border-f-light-grey">
-                                                <p class="text-32 font-medium">09</p>
-                                                <p class="text-16 font-medium">Jan</p>
+                                                <p class="font-medium text-32">09</p>
+                                                <p class="font-medium text-16">Jan</p>
                                             </div>
                                             <div class="flex-col pl-6">
                                                 <p class="text-32">09:30</p>
@@ -148,7 +148,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    class="flex flex-row items-end justify-between p-6 mb-6 border rounded shadow-medium border-f-bcg">
                                     <div class="flex flex-col space-y-6">
                                         <div>
                                             <p class="text-16 text-f-blue bg-f-16-blue inline px-2.5 rounded-full py-1">
@@ -156,8 +156,8 @@
                                         </div>
                                         <div class="flex flex-row">
                                             <div class="flex-col pr-6 border-r border-f-light-grey">
-                                                <p class="text-32 font-medium">09</p>
-                                                <p class="text-16 font-medium">Jan</p>
+                                                <p class="font-medium text-32">09</p>
+                                                <p class="font-medium text-16">Jan</p>
                                             </div>
                                             <div class="flex-col pl-6">
                                                 <p class="text-32">09:30</p>
@@ -170,7 +170,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    class="flex flex-row items-end justify-between p-6 mb-6 border rounded shadow-medium border-f-bcg">
                                     <div class="flex flex-col space-y-6">
                                         <div>
                                             <p
@@ -179,8 +179,8 @@
                                         </div>
                                         <div class="flex flex-row">
                                             <div class="flex-col pr-6 border-r border-f-light-grey">
-                                                <p class="text-32 font-medium">09</p>
-                                                <p class="text-16 font-medium">Jan</p>
+                                                <p class="font-medium text-32">09</p>
+                                                <p class="font-medium text-16">Jan</p>
                                             </div>
                                             <div class="flex-col pl-6">
                                                 <p class="text-32">09:30</p>
@@ -193,7 +193,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    class="flex flex-row items-end justify-between p-6 mb-6 border rounded shadow-medium border-f-bcg">
                                     <div class="flex flex-col space-y-6">
                                         <div>
                                             <p
@@ -202,8 +202,8 @@
                                         </div>
                                         <div class="flex flex-row">
                                             <div class="flex-col pr-6 border-r border-f-light-grey">
-                                                <p class="text-32 font-medium">09</p>
-                                                <p class="text-16 font-medium">Jan</p>
+                                                <p class="font-medium text-32">09</p>
+                                                <p class="font-medium text-16">Jan</p>
                                             </div>
                                             <div class="flex-col pl-6">
                                                 <p class="text-32">09:30</p>
@@ -212,17 +212,17 @@
                                         </div>
                                     </div>
                                     <div class="flex flex-col space-y-6">
-                                        <p class="text-16 text-f-dark-grey font-medium">Cancelled lesson</p>
+                                        <p class="font-medium text-16 text-f-dark-grey">Cancelled lesson</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div x-show="openTab === 2">
-                        <div class="flex flex-row space-x-6 items-start">
+                        <div class="flex flex-row items-start space-x-6">
                             <div class="flex flex-col w-2/3">
                                 <div
-                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between rounded mb-6">
+                                    class="flex flex-row justify-between p-6 mb-6 border rounded shadow-medium border-f-bcg">
                                     <div class="flex flex-col space-y-6">
                                         <div>
                                             <p class="text-16 text-f-blue bg-f-16-blue inline px-2.5 rounded-full py-1">
@@ -230,8 +230,8 @@
                                         </div>
                                         <div class="flex flex-row">
                                             <div class="flex-col pr-6 border-r border-f-light-grey">
-                                                <p class="text-32 font-medium">09</p>
-                                                <p class="text-16 font-medium">Jan</p>
+                                                <p class="font-medium text-32">09</p>
+                                                <p class="font-medium text-16">Jan</p>
                                             </div>
                                             <div class="flex-col pl-6">
                                                 <p class="text-32">09:30</p>
@@ -245,7 +245,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    class="flex flex-row items-end justify-between p-6 mb-6 border rounded shadow-medium border-f-bcg">
                                     <div class="flex flex-col space-y-6">
                                         <div>
                                             <p class="text-16 text-f-blue bg-f-16-blue inline px-2.5 rounded-full py-1">
@@ -253,8 +253,8 @@
                                         </div>
                                         <div class="flex flex-row">
                                             <div class="flex-col pr-6 border-r border-f-light-grey">
-                                                <p class="text-32 font-medium">09</p>
-                                                <p class="text-16 font-medium">Jan</p>
+                                                <p class="font-medium text-32">09</p>
+                                                <p class="font-medium text-16">Jan</p>
                                             </div>
                                             <div class="flex-col pl-6">
                                                 <p class="text-32">09:30</p>
@@ -267,7 +267,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    class="flex flex-row items-end justify-between p-6 mb-6 border rounded shadow-medium border-f-bcg">
                                     <div class="flex flex-col space-y-6">
                                         <div>
                                             <p
@@ -276,8 +276,8 @@
                                         </div>
                                         <div class="flex flex-row">
                                             <div class="flex-col pr-6 border-r border-f-light-grey">
-                                                <p class="text-32 font-medium">09</p>
-                                                <p class="text-16 font-medium">Jan</p>
+                                                <p class="font-medium text-32">09</p>
+                                                <p class="font-medium text-16">Jan</p>
                                             </div>
                                             <div class="flex-col pl-6">
                                                 <p class="text-32">09:30</p>
@@ -290,7 +290,7 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="flex flex-row p-6 shadow-medium border-f-bcg border justify-between items-end rounded mb-6">
+                                    class="flex flex-row items-end justify-between p-6 mb-6 border rounded shadow-medium border-f-bcg">
                                     <div class="flex flex-col space-y-6">
                                         <div>
                                             <p
@@ -299,8 +299,8 @@
                                         </div>
                                         <div class="flex flex-row">
                                             <div class="flex-col pr-6 border-r border-f-light-grey">
-                                                <p class="text-32 font-medium">09</p>
-                                                <p class="text-16 font-medium">Jan</p>
+                                                <p class="font-medium text-32">09</p>
+                                                <p class="font-medium text-16">Jan</p>
                                             </div>
                                             <div class="flex-col pl-6">
                                                 <p class="text-32">09:30</p>
@@ -309,14 +309,14 @@
                                         </div>
                                     </div>
                                     <div class="flex flex-col space-y-6">
-                                        <p class="text-16 text-f-dark-grey font-medium">Cancelled lesson</p>
+                                        <p class="font-medium text-16 text-f-dark-grey">Cancelled lesson</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div x-show="openTab === 3" class="pt-4">
-                        <h2 class="text-24 text-f-dark-blue font-medium mb-4">You don't have booked lessons</h2>
+                        <h2 class="mb-4 font-medium text-24 text-f-dark-blue">You don't have booked lessons</h2>
                         <p class="mb-8">But don't worry, you can choose teacher and book a lesson with teacher</p>
                         <button class="btn-primary w-200px">Book a lesson</button>
                     </div>

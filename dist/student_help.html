@@ -14,20 +14,20 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
-<body class="font-Ubuntu bg-f-white min-h-screen fixed">
-    <div class="flex flex-row min-h-screen w-full">
+<body class="fixed min-h-screen font-Ubuntu bg-f-white">
+    <div class="flex flex-row w-full min-h-screen">
         <div @click.away="open = false"
-            class="flex flex-col w-96 text-f-white bg-f-dark-blue flex-shrink-0 pl-60px py-60px"
+            class="flex flex-col flex-shrink-0 w-96 text-f-white bg-f-dark-blue pl-60px py-60px"
             x-data="{ open: false }">
-            <div class="flex-shrink-0 px-6 flex flex-row items-center justify-between">
-                <a class="flex title-font font-medium items-center text-gray-900 mb-16">
+            <div class="flex flex-row items-center justify-between flex-shrink-0 px-6">
+                <a class="flex items-center mb-16 font-medium text-gray-900 title-font">
                     <img src="img\book-of-black-cover-closed.svg" alt="" srcset="">
                     <span class="ml-3 text-logo font-logo text-f-white">FeliTalk</span>
                 </a>
                 
             </div>
             <nav 
-                class="flex-grow pr-4 pb-0 overflow-y-auto">
+                class="flex-grow pb-0 pr-4 overflow-y-auto">
                 <a class="sidebar-li-active" href="#"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -106,19 +106,19 @@
                 </div>
             </div>
         </div>
-        <div class="w-100-384px overflow-auto max-h-screen py-12 px-6">
-            <h1 class="text-32 text-f-dark-blue font-bold mb-6">Help</h1>
-           <div class="flex flex-row space-x-6 mb-16">
-               <a href="#" class="flex flex-col flex-1 shadow-base rounded border border-f-bcg p-6 items-start justify-between">
-                   <p class="font-medium mb-4">Download and prepare Skype for FeliTalk</p>
+        <div class="max-h-screen px-6 py-12 overflow-auto w-100-384px">
+            <h1 class="mb-6 font-bold text-32 text-f-dark-blue">Help</h1>
+           <div class="flex flex-row mb-16 space-x-6">
+               <a href="#" class="flex flex-col items-start justify-between flex-1 p-6 border rounded shadow-base border-f-bcg">
+                   <p class="mb-4 font-medium">Download and prepare Skype for FeliTalk</p>
                    <p><img src="img/arrow-right.svg" alt=""></p>
                </a>
-               <a href="#" class="flex flex-col flex-1 shadow-base rounded border border-f-bcg p-6 items-start justify-between">
-                   <p class="font-medium mb-4">Book and take a lesson</p>
+               <a href="#" class="flex flex-col items-start justify-between flex-1 p-6 border rounded shadow-base border-f-bcg">
+                   <p class="mb-4 font-medium">Book and take a lesson</p>
                    <p><img src="img/arrow-right.svg" alt=""></p>
                </a>
-               <a href="#" class="flex flex-col flex-1 shadow-base rounded border border-f-bcg p-6 items-start justify-between">
-                   <p class="font-medium mb-4">Have a lesson</p>
+               <a href="#" class="flex flex-col items-start justify-between flex-1 p-6 border rounded shadow-base border-f-bcg">
+                   <p class="mb-4 font-medium">Have a lesson</p>
                    <p><img src="img/arrow-right.svg" alt=""></p>
                </a>
            </div>
@@ -126,76 +126,76 @@
                <div class="flex flex-col flex-1 space-y-2">
                    <!-- add or remove .collapse to open ro close -->
                    <div class="flex flex-col rounded collapsed">
-                       <button class="flex flex-row justify-between px-8 py-5 items-center">
+                       <button class="flex flex-row items-center justify-between px-8 py-5">
                            <p class="font-medium">How does it work?</p>
-                           <p class="text-24 font-medium text-f-yellow">+</p>
+                           <p class="font-medium text-24 text-f-yellow">+</p>
                         </button>
-                        <div class="hidden flex-col px-8 pb-5 collapse-body">
+                        <div class="flex-col hidden px-8 pb-5 collapse-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget tincidunt enim gravida at. Fusce at bibendum erat. Nullam convallis urna ac tortor condimentum, vitae fermentum urna mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
                         </div>
                    </div>
                    <div class="flex flex-col rounded ">
-                       <button class="flex flex-row justify-between px-8 py-5 items-center">
+                       <button class="flex flex-row items-center justify-between px-8 py-5">
                            <p class="font-medium">How does it work?</p>
-                           <p class="text-24 font-medium text-f-yellow">+</p>
+                           <p class="font-medium text-24 text-f-yellow">+</p>
                         </button>
-                        <div class="hidden flex-col px-8 pb-5 collapse-body">
+                        <div class="flex-col hidden px-8 pb-5 collapse-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget tincidunt enim gravida at. Fusce at bibendum erat. Nullam convallis urna ac tortor condimentum, vitae fermentum urna mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
                         </div>
                    </div>
                    <div class="flex flex-col rounded ">
-                       <button class="flex flex-row justify-between px-8 py-5 items-center">
+                       <button class="flex flex-row items-center justify-between px-8 py-5">
                            <p class="font-medium">How does it work?</p>
-                           <p class="text-24 font-medium text-f-yellow">+</p>
+                           <p class="font-medium text-24 text-f-yellow">+</p>
                         </button>
-                        <div class="hidden flex-col px-8 pb-5 collapse-body">
+                        <div class="flex-col hidden px-8 pb-5 collapse-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget tincidunt enim gravida at. Fusce at bibendum erat. Nullam convallis urna ac tortor condimentum, vitae fermentum urna mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
                         </div>
                    </div>
                    <div class="flex flex-col rounded ">
-                       <button class="flex flex-row justify-between px-8 py-5 items-center">
+                       <button class="flex flex-row items-center justify-between px-8 py-5">
                            <p class="font-medium">How does it work?</p>
-                           <p class="text-24 font-medium text-f-yellow">+</p>
+                           <p class="font-medium text-24 text-f-yellow">+</p>
                         </button>
-                        <div class="hidden flex-col px-8 pb-5 collapse-body">
+                        <div class="flex-col hidden px-8 pb-5 collapse-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget tincidunt enim gravida at. Fusce at bibendum erat. Nullam convallis urna ac tortor condimentum, vitae fermentum urna mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
                         </div>
                    </div>
                </div>
                <div class="flex flex-col flex-1 space-y-2">
                    <div class="flex flex-col rounded ">
-                       <button class="flex flex-row justify-between px-8 py-5 items-center">
+                       <button class="flex flex-row items-center justify-between px-8 py-5">
                            <p class="font-medium">How does it work?</p>
-                           <p class="text-24 font-medium text-f-yellow">+</p>
+                           <p class="font-medium text-24 text-f-yellow">+</p>
                         </button>
-                        <div class="hidden flex-col px-8 pb-5 collapse-body">
+                        <div class="flex-col hidden px-8 pb-5 collapse-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget tincidunt enim gravida at. Fusce at bibendum erat. Nullam convallis urna ac tortor condimentum, vitae fermentum urna mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
                         </div>
                    </div>
                    <div class="flex flex-col rounded ">
-                       <button class="flex flex-row justify-between px-8 py-5 items-center">
+                       <button class="flex flex-row items-center justify-between px-8 py-5">
                            <p class="font-medium">How does it work?</p>
-                           <p class="text-24 font-medium text-f-yellow">+</p>
+                           <p class="font-medium text-24 text-f-yellow">+</p>
                         </button>
-                        <div class="hidden flex-col px-8 pb-5 collapse-body">
+                        <div class="flex-col hidden px-8 pb-5 collapse-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget tincidunt enim gravida at. Fusce at bibendum erat. Nullam convallis urna ac tortor condimentum, vitae fermentum urna mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
                         </div>
                    </div>
                    <div class="flex flex-col rounded ">
-                       <button class="flex flex-row justify-between px-8 py-5 items-center">
+                       <button class="flex flex-row items-center justify-between px-8 py-5">
                            <p class="font-medium">How does it work?</p>
-                           <p class="text-24 font-medium text-f-yellow">+</p>
+                           <p class="font-medium text-24 text-f-yellow">+</p>
                         </button>
-                        <div class="hidden flex-col px-8 pb-5 collapse-body">
+                        <div class="flex-col hidden px-8 pb-5 collapse-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget tincidunt enim gravida at. Fusce at bibendum erat. Nullam convallis urna ac tortor condimentum, vitae fermentum urna mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
                         </div>
                    </div>
                    <div class="flex flex-col rounded ">
-                       <button class="flex flex-row justify-between px-8 py-5 items-center">
+                       <button class="flex flex-row items-center justify-between px-8 py-5">
                            <p class="font-medium">How does it work?</p>
-                           <p class="text-24 font-medium text-f-yellow">+</p>
+                           <p class="font-medium text-24 text-f-yellow">+</p>
                         </button>
-                        <div class="hidden flex-col px-8 pb-5 collapse-body">
+                        <div class="flex-col hidden px-8 pb-5 collapse-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget tincidunt enim gravida at. Fusce at bibendum erat. Nullam convallis urna ac tortor condimentum, vitae fermentum urna mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
                         </div>
                    </div>

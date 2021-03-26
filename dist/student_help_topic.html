@@ -14,20 +14,20 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
-<body class="font-Ubuntu bg-f-white min-h-screen fixed">
-    <div class="flex flex-row min-h-screen w-full">
+<body class="fixed min-h-screen font-Ubuntu bg-f-white">
+    <div class="flex flex-row w-full min-h-screen">
         <div @click.away="open = false"
-            class="flex flex-col w-96 text-f-white bg-f-dark-blue flex-shrink-0 pl-60px py-60px"
+            class="flex flex-col flex-shrink-0 w-96 text-f-white bg-f-dark-blue pl-60px py-60px"
             x-data="{ open: false }">
-            <div class="flex-shrink-0 px-6 flex flex-row items-center justify-between">
-                <a class="flex title-font font-medium items-center text-gray-900 mb-16">
+            <div class="flex flex-row items-center justify-between flex-shrink-0 px-6">
+                <a class="flex items-center mb-16 font-medium text-gray-900 title-font">
                     <img src="img\book-of-black-cover-closed.svg" alt="" srcset="">
                     <span class="ml-3 text-logo font-logo text-f-white">FeliTalk</span>
                 </a>
                 
             </div>
             <nav 
-                class="flex-grow pr-4 pb-0 overflow-y-auto">
+                class="flex-grow pb-0 pr-4 overflow-y-auto">
                 <a class="sidebar-li-active" href="#"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -106,16 +106,16 @@
                 </div>
             </div>
         </div>
-        <div class="w-100-384px overflow-auto max-h-screen py-12 px-6">
-            <div class="flex flex-row justify-between items-center mb-20">
-                <h2 class="text-40 font-bold text-f-dark-blue">Download and prepare Skype for FeliTalk</h2>
+        <div class="max-h-screen px-6 py-12 overflow-auto w-100-384px">
+            <div class="flex flex-row items-center justify-between mb-20">
+                <h2 class="font-bold text-40 text-f-dark-blue">Download and prepare Skype for FeliTalk</h2>
             </div>
-            <div class="flex flex-row space-x-6 mb-6">
-                <div class="flex flex-none w-88px bg-polygon h-12 bg-no-repeat">
-                    <span class="text-32 text-f-white ml-4 font-bold">1</span>
+            <div class="flex flex-row mb-6 space-x-6">
+                <div class="flex flex-none h-12 bg-no-repeat w-88px bg-polygon">
+                    <span class="ml-4 font-bold text-32 text-f-white">1</span>
                 </div>
                 <div class="flex-col flex-auto">
-                    <h2 class="text-32 font-bold">Enter registration information</h2>
+                    <h2 class="font-bold text-32">Enter registration information</h2>
                     <p>Please enter the required information on the BizMates Free Membership Application page and click
                         the Submit button.</p>
                     <p>SSL encrypted communication is provided on the personal information entry page so that customers
@@ -127,12 +127,12 @@
                     <img src="img\Enter registration information.jpg" alt="sample image">
                 </div>
             </div>
-            <div class="flex flex-row space-x-6 mb-6">
-                <div class="flex flex-none w-88px bg-polygon h-12 bg-no-repeat">
-                    <span class="text-32 text-f-white ml-4 font-bold">2</span>
+            <div class="flex flex-row mb-6 space-x-6">
+                <div class="flex flex-none h-12 bg-no-repeat w-88px bg-polygon">
+                    <span class="ml-4 font-bold text-32 text-f-white">2</span>
                 </div>
                 <div class="flex-col flex-auto">
-                    <h2 class="text-32 font-bold">Enter registration information</h2>
+                    <h2 class="font-bold text-32">Enter registration information</h2>
                     <p>Please enter the required information on the BizMates Free Membership Application page and click
                         the Submit button.</p>
                     <p>SSL encrypted communication is provided on the personal information entry page so that customers
@@ -144,12 +144,12 @@
                     <img src="img\Enter registration information.jpg" alt="sample image">
                 </div>
             </div>
-            <div class="flex flex-row space-x-6 mb-6">
-                <div class="flex flex-none w-88px bg-polygon h-12 bg-no-repeat">
-                    <span class="text-32 text-f-white ml-4 font-bold">3</span>
+            <div class="flex flex-row mb-6 space-x-6">
+                <div class="flex flex-none h-12 bg-no-repeat w-88px bg-polygon">
+                    <span class="ml-4 font-bold text-32 text-f-white">3</span>
                 </div>
                 <div class="flex-col flex-auto">
-                    <h2 class="text-32 font-bold">Enter registration information</h2>
+                    <h2 class="font-bold text-32">Enter registration information</h2>
                     <p>Please enter the required information on the BizMates Free Membership Application page and click
                         the Submit button.</p>
                     <p>SSL encrypted communication is provided on the personal information entry page so that customers
@@ -161,12 +161,12 @@
                     <img src="img\Enter registration information.jpg" alt="sample image">
                 </div>
             </div>
-            <div class="flex flex-row space-x-6 mb-6">
-                <div class="flex flex-none w-88px bg-polygon h-12 bg-no-repeat">
-                    <span class="text-32 text-f-white ml-4 font-bold">4</span>
+            <div class="flex flex-row mb-6 space-x-6">
+                <div class="flex flex-none h-12 bg-no-repeat w-88px bg-polygon">
+                    <span class="ml-4 font-bold text-32 text-f-white">4</span>
                 </div>
                 <div class="flex-col flex-auto">
-                    <h2 class="text-32 font-bold">Enter registration information</h2>
+                    <h2 class="font-bold text-32">Enter registration information</h2>
                     <p>Please enter the required information on the BizMates Free Membership Application page and click
                         the Submit button.</p>
                     <p>SSL encrypted communication is provided on the personal information entry page so that customers
@@ -179,7 +179,7 @@
                 </div>
             </div>
             <div class="flex justify-center mb-48">
-                <a href="#" class="text-24 font-medium text-f-yellow hover:underline object-center">Download and prepare
+                <a href="#" class="object-center font-medium text-24 text-f-yellow hover:underline">Download and prepare
                     Skype for FeliTalk<img src="img\arrow-right.svg" alt="arrow right"
                         class="inline-block w-3.5 h-3.5 ml-2"></a>
             </div>
