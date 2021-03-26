@@ -69,6 +69,7 @@ module.exports = {
         '88px': '5.5rem',
         '424px': '26.5rem',
         '100-384px': 'calc(100vw - 24rem)',
+        '100-7rem': 'calc(100vw - 7rem)',
         '1344px': '84rem',
         '200px': '12.5rem',
       },
