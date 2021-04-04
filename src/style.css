@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer components {
   .container{
-    @apply px-4;
+    @apply mx-auto max-w-1248px xl:max-w-984px lg:max-w-728px;
   }
   button:disabled{
     @apply cursor-not-allowed opacity-40;
