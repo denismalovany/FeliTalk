@@ -109,8 +109,8 @@
         <div class="max-h-screen px-6 py-12 overflow-auto w-100-384px xl:w-100-7rem">
             <h1 class="font-bold text-32 text-f-dark-blue">Profile</h1>
             <div class="flex flex-col space-y-6">
-                <div class="flex flex-row space-x-6">
-                    <div class="flex flex-row flex-auto w-1/2 p-6 space-x-4 border border-f-bcg shadow-medium">
+                <div class="flex flex-row space-x-6 lg:flex-col lg:space-x-0 lg:space-y-6">
+                    <div class="flex flex-row flex-auto w-1/2 p-6 space-x-4 border border-f-bcg shadow-medium lg:w-full">
                         <p><img class="rounded-full w-68px h-68px" src="img\avatar.jpg" alt=""></p>
                         <div class="flex flex-col flex-auto">
                             <div class="flex flex-row justify-between">
@@ -122,7 +122,7 @@
                             <p class="">Password: <span class="font-medium">****</span></p>
                         </div>
                     </div>
-                    <div class="flex flex-row flex-auto w-1/2 p-6 space-x-4 border border-f-bcg shadow-medium">
+                    <div class="flex flex-row flex-auto w-1/2 p-6 space-x-4 border border-f-bcg shadow-medium lg:w-full">
                         <div class="flex flex-col flex-auto">
                             <div class="flex flex-row justify-between mb-6">
                                 <h3 class="font-medium text-24 text-f-dark-blue">Payment</h3>
@@ -137,8 +137,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-row space-x-6">
-                    <div class="flex flex-row flex-auto w-2/3 p-6 space-x-4 border border-f-bcg shadow-medium">
+                <div class="flex flex-row space-x-6 lg:flex-col lg:space-x-0 lg:space-y-6">
+                    <div class="flex flex-row flex-auto w-2/3 p-6 space-x-4 border border-f-bcg shadow-medium lg:w-full">
                         <div class="flex flex-col flex-auto">
                             <div class="flex flex-row justify-between mb-4">
                                 <h3 class="font-medium text-24 text-f-dark-blue">My lessons</h3>
@@ -172,7 +172,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-row flex-auto w-1/3 p-6 space-x-4 border border-f-bcg shadow-medium">
+                    <div class="flex flex-row flex-auto w-1/3 p-6 space-x-4 border border-f-bcg shadow-medium lg:w-full">
                         <div class="flex flex-col flex-auto">
                             <div class="flex flex-row justify-between mb-4">
                                 <h3 class="font-medium text-24 text-f-dark-blue">Schedule</h3>
@@ -185,14 +185,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-row space-x-6">
-                    <div class="flex flex-col flex-auto w-2/3 p-6 border border-f-bcg shadow-medium">
+                <div class="flex flex-row space-x-6 lg:flex-col lg:space-x-0 lg:space-y-6">
+                    <div class="flex flex-col flex-auto w-2/3 p-6 border border-f-bcg shadow-medium lg:w-full">
                         <h3 class="mb-6 font-medium text-24 text-f-dark-blue">My lessons</h3>
                         <p class="mb-4 font-medium text-16 text-f-dark-blue">You don't have booked lessons</p>
                         <p class="mb-6 text-16 text-f-dark-blue">But don't worry, you can choose teacher and book a lesson with teacher</p>
                         <button class="btn-secondary w-200px">Book a lesson</button>
                     </div>
-                    <div class="flex flex-row flex-auto w-1/3 p-6 space-x-4 border border-f-bcg shadow-medium">
+                    <div class="flex flex-row flex-auto w-1/3 p-6 space-x-4 border border-f-bcg shadow-medium lg:w-full">
                         <div class="flex flex-col flex-auto">
                             <div class="flex flex-row justify-between mb-4">
                                 <h3 class="font-medium text-24 text-f-dark-blue">Schedule</h3>
@@ -204,23 +204,25 @@
                     </div>
                 </div>
                 <div class="flex flex-row space-x-6">
-                    <div class="flex flex-row flex-auto w-1/3 px-6 py-10 space-x-4 border border-f-bcg shadow-medium">
-                        <p class="p-5 rounded shadow-medium border-bcg bg-f-bcg"><img src="img\romantic-date.svg" alt=""></p>
-                        <div class="flex flex-col">
+                    <div class="flex flex-row flex-auto w-1/3 px-6 py-10 space-x-4 border border-f-bcg shadow-medium lg:flex-col lg:space-x-0 lg:space-y-4">
+                        <p class="p-5 rounded shadow-medium border-bcg bg-f-bcg"><img src="img\romantic-date.svg"
+                                alt=""></p>
+                        <div class="flex flex-col lg:flex-row lg:space-x-4">
                             <p class="font-bold text-32 text-f-blue">22</p>
                             <p class="text-16 text-f-dark-grey">Days with FeliTalk</p>
                         </div>
                     </div>
-                    <div class="flex flex-row flex-auto w-1/3 px-6 py-10 space-x-4 border border-f-bcg shadow-medium">
-                        <p class="p-5 rounded shadow-medium border-bcg bg-f-bcg"><img src="img\college-graduation.svg" alt=""></p>
-                        <div class="flex flex-col">
+                    <div class="flex flex-row flex-auto w-1/3 px-6 py-10 space-x-4 border border-f-bcg shadow-medium lg:flex-col lg:space-x-0 lg:space-y-4">
+                        <p class="p-5 rounded shadow-medium border-bcg bg-f-bcg"><img src="img\college-graduation.svg"
+                                alt=""></p>
+                        <div class="flex flex-col lg:flex-row lg:space-x-4">
                             <p class="font-bold text-32 text-f-blue">4</p>
                             <p class="text-16 text-f-dark-grey">All lessons</p>
                         </div>
                     </div>
-                    <div class="flex flex-row flex-auto w-1/3 px-6 py-10 space-x-4 border border-f-bcg shadow-medium">
+                    <div class="flex flex-row flex-auto w-1/3 px-6 py-10 space-x-4 border border-f-bcg shadow-medium lg:flex-col lg:space-x-0 lg:space-y-4">
                         <p class="p-5 rounded shadow-medium border-bcg bg-f-bcg"><img src="img\checked.svg" alt=""></p>
-                        <div class="flex flex-col">
+                        <div class="flex flex-col lg:flex-row lg:space-x-4">
                             <p class="font-bold text-32 text-f-blue">1</p>
                             <p class="text-16 text-f-dark-grey">Completed lessons</p>
                         </div>
