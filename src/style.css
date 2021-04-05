@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer components {
   .container{
-    @apply mx-auto max-w-1248px xl:max-w-984px lg:max-w-728px;
+    @apply mx-auto max-w-1248px xl:max-w-984px lg:max-w-728px md:px-4 md:w-screen;
   }
   .tw-static{
     position: static !important;
@@ -161,5 +161,10 @@
   }
   .collapsed .collapse-body{
     @apply flex;
+  }
+  @media (max-width: 767px) {
+    html{
+      font-size: 10px;
+    }
   }
 }

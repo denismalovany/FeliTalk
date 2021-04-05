@@ -19,17 +19,20 @@
         <div class="container flex flex-row items-center py-4 mx-auto">
             <a class="flex items-center font-medium text-gray-900 title-font">
                 <img src="img\book-of-black-cover-closed.svg" alt="" srcset="">
-                <span class="ml-3 text-logo font-logo text-f-dark-blue lg:hidden">FeliTalk</span>
+                <span class="ml-3 text-logo font-logo text-f-dark-blue">FeliTalk</span>
             </a>
-            <nav class="flex flex-wrap items-center justify-center mx-auto space-x-5 text-base font-normal">
+            <nav class="flex flex-wrap items-center justify-center mx-auto space-x-5 text-base font-normal md:hidden">
                 <a class="font-medium hover:text-gray-900 header-active">Features</a>
                 <a class="hover:text-gray-900">Teachers</a>
                 <a class="hover:text-gray-900">Plans</a>
                 <a class="hover:text-gray-900">Lesson materials</a>
                 <a class="hover:text-gray-900">FAQ</a>
             </nav>
-            <button class="btn-transparent lg:px-2">Log in</button>
-            <button class="btn-primary">Free trial lesson</button>
+            <button class="btn-transparent lg:px-2 md:hidden">Log in</button>
+            <button class="btn-primary md:hidden">Free trial lesson</button>
+            <button class="hidden md:inline-block">
+                <img src="img/user.svg" alt="user icon">
+            </button>
         </div>
     </header>
     <section class="text-gray-600 body-font">
