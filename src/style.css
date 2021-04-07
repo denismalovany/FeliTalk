@@ -20,13 +20,13 @@
     @apply cursor-not-allowed opacity-40;
   }
   .btn-primary {
-    @apply items-center inline py-3 text-base font-medium text-white border-0 rounded bg-f-yellow px-9 focus:outline-none hover:shadow-hover;
+    @apply items-center inline py-3 text-base font-medium text-white border-0 rounded bg-f-yellow px-9 focus:outline-none hover:shadow-hover md:py-5 md:text-24;
   }
   .btn-secondary {
-    @apply items-center inline py-3 text-base font-medium bg-transparent border-2 rounded text-f-yellow border-f-yellow px-9 focus:outline-none hover:underline;
+    @apply items-center inline py-3 text-base font-medium bg-transparent border-2 rounded text-f-yellow border-f-yellow px-9 focus:outline-none hover:underline md:py-5 md:text-24;
   }
   .btn-transparent {
-    @apply items-center inline py-3 text-base font-medium bg-transparent border-0 rounded text-f-yellow px-9 focus:outline-none hover:underline;
+    @apply items-center inline py-3 text-base font-medium bg-transparent border-0 rounded text-f-yellow px-9 focus:outline-none hover:underline md:py-5 md:text-24;
   }
   .breadcrumps-row{
     @apply flex flex-row text-f-grey;

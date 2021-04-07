@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
-<body class="relative min-h-screen pt-24 font-Ubuntu bg-f-white pb-468px lg:pb-615px">
+<body class="relative min-h-screen pt-24 overflow-x-hidden font-Ubuntu bg-f-white pb-468px lg:pb-615px">
     <header class="fixed top-0 z-20 text-gray-600 body-font bg-f-white" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
         <div class="container flex flex-row items-center py-4 mx-auto md:justify-between">
             <a class="flex items-center font-medium text-gray-900 title-font">
@@ -65,21 +65,21 @@
     </header>
     <section class="text-gray-600 body-font">
         <video playsinline autoplay muted loop poster="img/video.jpg" id="bgvid"
-            class="absolute object-cover w-auto min-w-full bg-cover h-748px"
+            class="absolute object-cover w-auto min-w-full bg-cover h-748px md:h-96"
             style="background: url('img/video.jpg') no-repat; z-index: -1;">
             <source src="video/production ID_3971351.webm" type="video/webm">
             <source src="video/production ID_3971351.mp4" type="video/mp4">
         </video>
-        <div class="z-10 w-full bg-center bg-cover h-748px">
+        <div class="z-10 w-full bg-center bg-cover h-748px md:h-96">
             <div class="container h-full mx-auto">
-                <div class="flex items-center justify-start h-full">
-                    <div class="text-left">
-                        <h1 class="font-semibold text-white uppercase text-56">UNLIMITED MOTIVATION</h1>
-                        <p class="my-24 text-white text-24">Meet the best tutors. <br>
+                <div class="flex items-center justify-start h-full md:justify-center">
+                    <div class="text-left md:text-center">
+                        <h1 class="font-semibold text-white uppercase text-56 md:text-32">UNLIMITED MOTIVATION</h1>
+                        <p class="my-24 text-white text-24 md:my-6">Meet the best tutors. <br>
                             Reach your full potential. <br>
                             Now.</p>
                         <button
-                            class="inline-flex items-center py-3 text-base font-medium text-white border-0 rounded bg-f-yellow px-9 focus:outline-none hover:shadow-hover">Join
+                            class="btn-primary">Join
                             now</button>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                     class="font-medium text-f-yellow text-16 hover:underline">Meet all teachers</a>
             </div>
             <div class="flex flex-wrap mt-6">
-                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px">
+                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px md:w-1/2 md:p-6">
                     <img src="img\teacher.jpg" class="object-cover w-full h-full mx-auto rounded-full max-h-312px"
                         alt="teachers profile picture">
                     <h3 class="mt-4 font-normal text-24">Alexandra</h3>
@@ -140,13 +140,13 @@
                             <img src="img\star.svg" class="mx-1" alt="">
                             <img src="img\star.svg" class="mx-1" alt="">
                         </div>
-                        <span class="ml-2 font-medium text-16">5.0</span>
+                        <span class="ml-2 font-medium text-16 md:hidden">5.0</span>
                     </div>
                     <div class="flex flex-row justify-center w-full">
                         <span class="ml-2 font-normal text-18">Philippines</span>
                     </div>
                 </div>
-                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px">
+                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px md:w-1/2 md:p-6">
                     <img src="img\teacher.jpg" class="object-cover w-full h-full mx-auto rounded-full max-h-312px"
                         alt="teachers profile picture">
                     <h3 class="mt-4 font-normal text-24">Alexandra</h3>
@@ -158,13 +158,13 @@
                             <img src="img\star.svg" class="mx-1" alt="">
                             <img src="img\star.svg" class="mx-1" alt="">
                         </div>
-                        <span class="ml-2 font-medium text-16">5.0</span>
+                        <span class="ml-2 font-medium text-16 md:hidden">5.0</span>
                     </div>
                     <div class="flex flex-row justify-center w-full">
                         <span class="ml-2 font-normal text-18">Philippines</span>
                     </div>
                 </div>
-                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px">
+                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px md:w-1/2 md:p-6">
                     <img src="img\teacher.jpg" class="object-cover w-full h-full mx-auto rounded-full max-h-312px"
                         alt="teachers profile picture">
                     <h3 class="mt-4 font-normal text-24">Alexandra</h3>
@@ -176,13 +176,13 @@
                             <img src="img\star.svg" class="mx-1" alt="">
                             <img src="img\star.svg" class="mx-1" alt="">
                         </div>
-                        <span class="ml-2 font-medium text-16">5.0</span>
+                        <span class="ml-2 font-medium text-16 md:hidden">5.0</span>
                     </div>
                     <div class="flex flex-row justify-center w-full">
                         <span class="ml-2 font-normal text-18">Philippines</span>
                     </div>
                 </div>
-                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px">
+                <div class="flex flex-col w-1/4 p-3 text-center max-w-312px md:w-1/2 md:p-6">
                     <img src="img\teacher.jpg" class="object-cover w-full h-full mx-auto rounded-full max-h-312px"
                         alt="teachers profile picture">
                     <h3 class="mt-4 font-normal text-24">Alexandra</h3>
@@ -194,7 +194,7 @@
                             <img src="img\star.svg" class="mx-1" alt="">
                             <img src="img\star.svg" class="mx-1" alt="">
                         </div>
-                        <span class="ml-2 font-medium text-16">5.0</span>
+                        <span class="ml-2 font-medium text-16 md:hidden">5.0</span>
                     </div>
                     <div class="flex flex-row justify-center w-full">
                         <span class="ml-2 font-normal text-18">Philippines</span>
@@ -263,7 +263,7 @@
                 <li class="mb-2 ml-5 text-24">Student will have to option to upgrade from Basic to Premium plan during
                     the month</li>
             </ul>
-            <div class="flex flex-row space-x-6">
+            <div class="flex flex-row space-x-6 md:flex-col md:space-x-0 md:space-y-6">
                 <div class="flex-1 p-6 rounded bg-f-blue bg-opacity-30">
                     <h3 class="mb-4 font-bold h2 text-32">How to pay</h3>
                     <p class="mb-2 font-normal text-24">After free registration, students can subscribe and purchase
@@ -484,7 +484,7 @@
                 <h2 class="font-bold text-40 text-f-dark-blue">Lesson materials</h2>
                 <a href="#" class="font-medium text-24 text-f-yellow hover:underline">See all lesson materials</a>
             </div>
-            <div class="flex flex-row space-x-6 mb-36">
+            <div class="flex flex-row space-x-6 mb-36 md:flex-col md:space-x-0 md:space-y-6">
                 <div class="flex-1 p-4 rounded shadow-medium">
                     <img src="img\Tokyo-cuate 2.svg" class="w-full mb-4" alt="">
                     <div class="bg-f-blue bg-opacity-16 rounded-full text-center mb-2 px-2.5 inline-block">
@@ -518,7 +518,7 @@
                                 class="inline object-center" alt="right-arrow"></span></h3>
                 </div>
             </div>
-            <div class="flex flex-row space-x-6">
+            <div class="flex flex-row space-x-6 md:flex-col md:space-x-0 md:space-y-6">
                 <div class="flex-col flex-1 space-y-6">
                     <div class="px-6 rounded bg-f-dark-blue py-28 h-96 lg:py-11">
                         <h3 class="mb-6 font-bold text-40 text-f-white">Our youtube video</h3>
@@ -582,8 +582,8 @@
     <section class="text-white bg-f-dark-blue">
         <div class="container py-12 mx-auto">
             <h2 class="font-bold text-40">How to prepare oneself for lesson</h2>
-            <div class="flex flex-row">
-                <img src="img\Login-cuate 1.svg" alt="login picture" class="flex-1">
+            <div class="flex flex-row md:flex-col">
+                <img src="img\Login-cuate 1.svg" alt="login picture" class="flex-1 md:w-1/2 md:self-center">
                 <div class="flex-1 py-14">
                     <h3 class="mb-4 font-medium text-24">Register as a free member and Log in</h3>
                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget
@@ -595,7 +595,7 @@
                         class="font-medium text-16 text-f-yellow hover:underline">Read more</a>
                 </div>
             </div>
-            <div class="flex flex-row">
+            <div class="flex flex-row md:flex-col-reverse">
                 <div class="flex-1 py-14">
                     <h3 class="mb-4 font-medium text-24">Download and prepare Skype for FeliTalk</h3>
                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget
@@ -606,10 +606,10 @@
                     <a href="#" target="_blank" rel="noopener noreferrer"
                         class="font-medium text-16 text-f-yellow hover:underline">Read more</a>
                 </div>
-                <img src="img\Online Review-cuate 1.svg" alt="login picture" class="flex-1">
+                <img src="img\Online Review-cuate 1.svg" alt="login picture" class="flex-1 md:w-1/2 md:self-center">
             </div>
-            <div class="flex flex-row">
-                <img src="img\Schedule-cuate 1.svg" alt="login picture" class="flex-1">
+            <div class="flex flex-row md:flex-col">
+                <img src="img\Schedule-cuate 1.svg" alt="login picture" class="flex-1 md:w-1/2 md:self-center">
                 <div class="flex-1 py-14">
                     <h3 class="mb-4 font-medium text-24">Book and take a trial lesson</h3>
                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget
@@ -621,7 +621,7 @@
                         class="font-medium text-16 text-f-yellow hover:underline">Read more</a>
                 </div>
             </div>
-            <div class="flex flex-row">
+            <div class="flex flex-row md:flex-col-reverse">
                 <div class="flex-1 py-14">
                     <h3 class="mb-4 font-medium text-24">Have a lesson</h3>
                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis nibh nunc, eget
@@ -632,7 +632,7 @@
                     <a href="#" target="_blank" rel="noopener noreferrer"
                         class="font-medium text-16 text-f-yellow hover:underline">Read more</a>
                 </div>
-                <img src="img\Working remotely-cuate 1.svg" alt="login picture" class="flex-1">
+                <img src="img\Working remotely-cuate 1.svg" alt="login picture" class="flex-1 md:w-1/2 md:self-center">
             </div>
         </div>
     </section>
