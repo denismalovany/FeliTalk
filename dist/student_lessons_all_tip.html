@@ -387,7 +387,7 @@
             </div>
         </div>
         <p class="mb-4">Would you like to leave a tip?</p>
-        <div class="flex flex-row justify-between mb-4">
+        <div class="flex flex-row justify-between mb-4 md:flex-col-reverse">
             <div class="flex flex-row items-stretch space-x-2 text-f-yellow">
                 <div class="flex items-center justify-center flex-1 p-2 border rounded cursor-pointer shadow-medium border-f-bcg hover:underline">
                     <p class="">No tip</p>
@@ -403,20 +403,20 @@
                     <p>Your amount</p>
                 </div>
             </div>
-            <div class="flex items-center justify-center px-6 rounded bg-f-very-light-blue">
+            <div class="flex items-center justify-center px-6 rounded bg-f-very-light-blue md:justify-start md:p-4 md:mb-6">
                 <p>Balance:  <span class="font-medium">1 coin</b></p>
             </div>
         </div>
         <form action="">
             <div class="input">
                 <label for="coins" class="mb-2 font-medium">Amount of tips</label>
-                <input class="h-10 mb-2 border rounded border-f-light-blue input-no-icon max-w-220px" type="text" name="coins" id="coins" placeholder="Enter amount of tips">
+                <input class="h-10 mb-2 border rounded border-f-light-blue input-no-icon md:h-16 md:max-w-none max-w-220px" type="text" name="coins" id="coins" placeholder="Enter amount of tips">
                 <p class="mb-2 font-medium">You don't have enought coins for tip</p>
                 <p class="mb-2">You can <a class="text-f-yellow hover:underline" href="#" target="_blank" rel="noopener noreferrer">Buy coins</a> or choose another amount of coins</p>
                 <p class="mb-2">You can <a class="text-f-yellow hover:underline" href="#" target="_blank" rel="noopener noreferrer">Buy coins</a></p>
         
             </div>
-            <button class="mt-10 btn-primary" disabled>Save & rate</button>
+            <button class="mt-10 btn-primary md:w-full" disabled>Save & rate</button>
         </form>
     </div><!-- /dialog -->
 </div><!-- /overlay -->
