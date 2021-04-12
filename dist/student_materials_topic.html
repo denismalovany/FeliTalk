@@ -17,7 +17,7 @@
 <body class="fixed min-h-screen font-Ubuntu bg-f-white">
     <div x-data="{ sidebarOpen: false }" class="flex flex-row w-full min-h-screen">
         <div @click.away="sidebarOpen = false" :class="{'xl:pl-6 xl:w-28':!sidebarOpen}"
-            class="flex flex-col flex-shrink-0 w-96 text-f-white bg-f-dark-blue pl-60px py-60px">
+            class="flex flex-col flex-shrink-0 w-96 text-f-white bg-f-dark-blue pl-60px py-60px md:hidden">
             <div :class="{'xl:px-2':!sidebarOpen}"
                 class="flex flex-row items-center justify-between flex-shrink-0 px-6">
                 <a @click="sidebarOpen = true" class="flex items-center mb-16 font-medium text-gray-900 title-font">
@@ -106,7 +106,57 @@
                 </div>
             </div>
         </div>
-        <div class="max-h-screen px-6 py-12 overflow-auto w-100-384px xl:w-100-7rem">
+        <header class="fixed top-0 z-20 hidden text-gray-600 body-font bg-f-white md:block shadow-medium"
+            x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
+            <div class="container flex flex-row items-center py-4 mx-auto md:justify-between">
+                <a class="flex items-center font-medium text-gray-900 title-font">
+                    <img class="h-10" src="img\book-of-black-cover-closed.svg" alt="" srcset="">
+                    <span class="ml-3 text-logo font-logo text-f-dark-blue">FeliTalk</span>
+                </a>
+                <nav
+                    class="flex flex-wrap items-center justify-center mx-auto space-x-5 text-base font-normal md:hidden">
+                    <a class="font-medium hover:text-gray-900 header-active">Features</a>
+                    <a class="hover:text-gray-900">Teachers</a>
+                    <a class="hover:text-gray-900">Plans</a>
+                    <a class="hover:text-gray-900">Lesson materials</a>
+                    <a class="hover:text-gray-900">FAQ</a>
+                </nav>
+                <button class="btn-transparent lg:px-2 md:hidden">Log in</button>
+                <button class="btn-primary md:hidden">Free trial lesson</button>
+                <div class="flex-row hidden md:flex">
+                    <button class="px-4 btn-transparent">
+                        <img src="img/user.svg" alt="user icon">
+                    </button>
+                    <button class="px-4 btn-transparent" @click="isOpen = !isOpen">
+                        <img src="img/menu.svg" alt="open menu button">
+                    </button>
+                </div>
+            </div>
+            <div class="container fixed top-0 flex flex-col h-screen overflow-hidden transition-all duration-500 ease-in-out bg-f-dark-blue"
+                :class="{'max-h-screen' : isOpen, 'max-h-0' : !isOpen}">
+                <div class="flex flex-col space-y-6">
+                    <div class="flex flex-row justify-between py-4">
+                        <a class="flex items-center font-medium text-gray-900 title-font">
+                            <img class="h-10" src="img\book-of-black-cover-closed.svg" alt="" srcset="">
+                            <span class="ml-3 text-logo font-logo text-f-white">FeliTalk</span>
+                        </a>
+                        <button class="px-4 btn-transparent" @click="isOpen = !isOpen">
+                            <img src="img/x.svg" alt="user icon">
+                        </button>
+                    </div>
+                    <nav class="flex flex-col">
+                        <a class="py-5 underline text-24 text-f-white">Features</a>
+                        <a class="py-5 text-24 text-f-white">Teachers</a>
+                        <a class="py-5 text-24 text-f-white">Plans</a>
+                        <a class="py-5 text-24 text-f-white">Lesson materials</a>
+                        <a class="py-5 text-24 text-f-white">FAQ</a>
+                    </nav>
+                    <button class="btn-primary">Free trial lesson</button>
+                    <button class="btn-secondary">Log in</button>
+                </div>
+            </div>
+        </header>
+        <div class="max-h-screen px-6 pt-40 pb-12 overflow-auto w-100-384px xl:w-100-7rem md:w-full">
             <div class="flex flex-row items-center justify-between mb-6">
                 <h2 class="font-bold text-40 text-f-dark-blue">Travelling</h2>
                 <button class="btn-secondary w-200px">Next</button>
