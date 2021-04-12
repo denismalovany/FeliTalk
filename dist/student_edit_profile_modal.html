@@ -330,7 +330,7 @@
                                     <p class="text-f-dark-grey">Allowed JPG, PNG. Max size 1 MB</p>
                                 </div>
                             </div>
-                            <div class="flex flex-row space-x-6">
+                            <div class="flex flex-row space-x-6 md:flex-col md:space-x-0">
                                 <div class="flex-1">
                                     <div class="input">
                                         <label for="name" class="mb-2">Name</label>
@@ -348,7 +348,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-row mb-6 space-x-6">
+                            <div class="flex flex-row mb-6 space-x-6 md:flex-col md:space-x-0">
                                 <div class="flex-1">
                                     <div class="input">
                                         <label for="email" class="mb-2">Email</label>
@@ -379,7 +379,7 @@
                             </div>
                             
                             <!-- add alert class to .input to make it red with message -->
-                            <div class="flex flex-row space-x-6">
+                            <div class="flex flex-row space-x-6 md:flex-col md:space-x-0 md:space-y-6">
                                 <button class="btn-primary">Save changes</button>
                                 <button class="btn-secondary">Cancel changes</button>
                             </div>
@@ -387,7 +387,7 @@
                     </div>
                     <div x-show="openTab === 2">
                         <form name="modal-form" action="#" class="flex flex-col mb-6">
-                            <div class="flex flex-row space-x-6">
+                            <div class="flex flex-row space-x-6 md:flex-col md:space-x-0">
                                 <div class="flex-1">
                                     <div class="input">
                                         <div class="flex flex-row justify-between">
@@ -401,7 +401,7 @@
                                 <div class="flex-1">
                                 </div>
                             </div>
-                            <div class="flex flex-row mb-6 space-x-6">
+                            <div class="flex flex-row mb-6 space-x-6 md:flex-col md:space-x-0">
                                 <div class="flex-1">
                                     <div class="input">
                                         <div class="flex flex-row justify-between">
@@ -425,7 +425,7 @@
                             </div>
                             
                             <!-- add alert class to .input to make it red with message -->
-                            <div class="flex flex-row space-x-6">
+                            <div class="flex flex-row space-x-6 md:flex-col md:space-x-0 md:space-y-6">
                                 <button class="btn-primary">Save changes</button>
                                 <button class="btn-secondary">Cancel changes</button>
                             </div>
@@ -440,16 +440,16 @@
                                         <img src="img/Mastercard_2019_logo 1.svg" alt="mastercard logo">
                                     </div>
                                     <div class="flex flex-col">
-                                        <h3 class="font-medium">Card ended</h3>
+                                        <h3 class="font-medium md:hidden">Card ended</h3>
                                         <p>Debit Mastercard (9723)</p>
                                     </div>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h3 class="font-medium">Expired</h3>
-                                    <p>05/2024)</p>
+                                    <h3 class="font-medium md:hidden">Expired</h3>
+                                    <p><span class="hidden md:inline">Exp </span>05/2024)</p>
                                 </div>
                                 <div class="flex flex-col">
-                                    <h3 class="font-medium">Cardholder name</h3>
+                                    <h3 class="font-medium md:hidden">Cardholder name</h3>
                                     <p>Daria Malovana</p>
                                 </div>
                                 <button><img src="img/trash-2.svg" alt=""></button>
