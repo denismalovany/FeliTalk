@@ -96,7 +96,7 @@
     @apply inline-block px-10 py-2 bg-white text-16 text-f-dark-blue;
   }
   .input{
-    @apply flex flex-col mb-2;
+    @apply flex flex-col mb-2 md:text-18;
   }
   /* .input>input{
     @apply pl-2;
@@ -111,11 +111,11 @@
     @apply pl-2;
   }
   .input-email{
-    @apply pl-10;
+    @apply pl-10 md:pl-16;
     background: url(img/mail.svg) no-repeat scroll 10px 10px;
   }
   .input-password{
-    @apply pl-10;
+    @apply pl-10 md:pl-16;
     background: url(img/lock.svg) no-repeat scroll 10px 10px;
   }
     /* custom radio buttons */
